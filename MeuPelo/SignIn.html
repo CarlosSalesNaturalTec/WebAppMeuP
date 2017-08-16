@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <title>Meu Pelô - Nova Conta de usuário</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <!-- Formulário -->
+    <div class="w3-display-container">
+        <img src="img/header-bg.jpg" alt="background">
+
+        <div class="w3-padding w3-display-middle">
+            <div class="w3-card-4" style="width: 800px">
+                <header class="w3-container w3-blue">
+                    <h3><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Cadastro de Novo Usuário</h3>
+                </header>
+                <div class="w3-container w3-white">
+                    <br>
+                    <div class="w3-container w3-border">
+
+                        <form class="w3-container">
+
+                            <label id="lblNomeRazao">Nome *</label>
+                            <input type="text" name="nomeRazao" id="input_nomeRazao" class="w3-input w3-border w3-round-large" required autofocus>
+
+                            <label>e-mail *</label>
+                            <input type="email" name="usrname" id="input_User" class="w3-input w3-border w3-round-large" required>
+
+                            <div class="w3-row">
+                                <div class="w3-half">
+                                    <label>Senha *</label>
+                                    <input type="password" name="psw" id="input_psw" class="w3-input w3-border w3-round-large" style="width: 95%" required>
+                                </div>
+                                <div class="w3-half">
+                                    <label>Confirme a Senha *</label>
+                                    <input type="password" name="pswConf" id="input_pswConf" class="w3-input w3-border w3-round-large" required>
+                                </div>
+                            </div>
+
+                            <div class="w3-row">
+                                <div class="w3-threequarter">
+                                    <label>Endereço *</label>
+                                    <input type="text" name="endereco" id="input_endereco" class="w3-input w3-border w3-round-large" style="width: 95%" required>
+                                </div>
+                                <div class="w3-quarter">
+                                    <label>Número *</label>
+                                    <input type="text" name="numero" id="input_numero" class="w3-input w3-border w3-round-large">
+                                </div>
+                            </div>
+
+                            <div class="w3-row">
+                                <label>Complemento</label>
+                                <input type="text" name="complemento" id="input_complemento" class="w3-input w3-border w3-round-large" >
+                            </div>
+
+                            <div class="w3-row">
+                                <label>Telefone *</label>
+                                <input type="text" name="telefone" id="input_telefone" class="w3-input w3-border w3-round-large" required>
+                            </div>
+
+                            <div class="w3-section">
+                                <input id="btSignIn" type="button" class="w3-button w3-block w3-blue w3-hover-light-blue w3-section w3-padding" onclick="NovoUsuario();" value="Salvar" />
+                            </div>
+
+                            <div id="divHidden" style="display: none" class="w3-center">
+                                <p>Aguarde <i class="fa fa-cog fa-spin fa-2x fa-fw"></i></p>
+                            </div>
+
+                        </form>
+
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Formulário -->
+
+   
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    
+    <!-- Script Autocomplete Endereço-->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOmedP-f3N7W7CPxaRoCZJ5mTMm6g0Ycc&libraries=places"></script>
+    <script type="text/javascript" src="scripts/codeAutoComplete.js"></script>     
+
+    <!-- Script Diversos -->
+    <script type="text/javascript" src="scripts/codeSignIn.js"></script>
+
+</body>
+</html>
