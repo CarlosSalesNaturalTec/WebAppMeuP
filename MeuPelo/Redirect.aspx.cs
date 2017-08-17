@@ -16,13 +16,11 @@ public partial class Redirect : System.Web.UI.Page
         {
             Session["UserID"] = Request.QueryString["v1"];
             Session["UserName"] = Request.QueryString["v2"];
-            Session["UserFaturar"] = Request.QueryString["v4"];
 
-            string tipoLogin = Request.QueryString["v5"];
+            //string tipoLogin = Request.QueryString["v5"];
+            //if (tipoLogin == "NewUser") { EnviarEmail(); }
 
-            if (tipoLogin == "NewUser") { EnviarEmail(); }
-
-            Response.Redirect("PainelCliente.aspx");
+            Response.Redirect("CAD_Lojista.html");
         }
         else
         {

@@ -43,10 +43,13 @@ public class WebService : System.Web.Services.WebService
                 string vValida1 = DateTime.Now.ToString("hh"); // hora
                 string vValida2 = DateTime.Now.ToString("mm"); // minuto
                 int vValida3 = Convert.ToInt16(vValida1) * Convert.ToInt16(vValida2);
-                string vValida4 = vValida3.ToString();
+                string vValida3a = vValida3.ToString();
 
-                url = "Redirect.aspx?v1=" + Convert.ToString(dados[0]) + "&v2=" + Convert.ToString(dados[1]) +
-                    "&v3=" + vValida4 + "&v4=0" + "&v5=NewUser";
+                // v1 = id do usuario    v2= nome      v3=validador
+
+                url = "Redirect.aspx?v1=" + Convert.ToString(dados[0]) + 
+                    "&v2=" + Convert.ToString(dados[1]) +
+                    "&v3=" + vValida3a;
             }
 
         }
