@@ -68,7 +68,7 @@
         </div>
     </nav>
 
-    <!-- Header -->
+    <!-- Inicio -->
     <header class="masthead">
         <div class="container">
             <div class="intro-text">
@@ -686,35 +686,96 @@
 
     <!-- Modal Login -->
     <div id="id01" class="w3-modal">
-        <div class="w3-modal-content w3-card-4 w3-animate-left" style="max-width: 400px">
+        <div class="w3-modal-content w3-card-4 w3-animate-top" style="max-width: 400px">
 
             <header class="w3-container w3-blue w3-center">
                 <span onclick="document.getElementById('id01').style.display='none'"
                     class="w3-button w3-display-topright">&times;</span>
-                <p>Área do Cliente</p>
+                <p>Área do Lojista</p>
             </header>
 
             <form class="w3-container">
                 <div class="w3-section">
-                    <label><b>Usuario</b></label>
-                    <input id="input_User" class="w3-input w3-border w3-round w3-margin-bottom" type="text" placeholder="Nome do Usuário" name="usrname"
+                    <input id="input_User" class="w3-input w3-border w3-round w3-margin-bottom" type="text" placeholder="email" name="usrname"
                         required>
-                    <label><b>Senha</b></label>
-                    <input id="input_pwd" class="w3-input w3-border w3-round" type="password" placeholder="Digite sua senha" name="psw" required>
+                    <input id="input_pwd" class="w3-input w3-border w3-round" type="password" placeholder="senha" name="psw" required>
 
                     <a id="btentrar" class="w3-btn w3-block w3-round w3-blue w3-hover-light-blue w3-section w3-padding" onclick="TentarLogin()">Entrar <i class="fa fa-sign-in" aria-hidden="true"></i></a>
                 </div>
             </form>
 
             <div class="w3-container w3-center w3-text-blue">
-                <p><a href="#" onclick="SignIn();">Criar Conta</a></p>
+                <p><a href="#" onclick="ExibirModalSignIn()">Criar Conta</a></p>
             </div>
         </div>
     </div>
 
-    <!-- Scripts diversas -->
-    <script type="text/javascript" src="scripts/codeLogin.js" ></script>
+    <!-- Modal SignIn - Criar Conta -->
+    <div id="divSignIn" class="w3-modal">
+        <div class="w3-modal-content w3-card-4 w3-animate-top" style="max-width: 600px">
 
+            <header class="w3-container w3-blue w3-center">
+                <span onclick="document.getElementById('divSignIn').style.display = 'none'"
+                      class="w3-button w3-display-topright">&times;</span>
+                <p>Cadastro de Novo Usuário</p>
+            </header>
+
+            <form class="w3-container">
+
+                <label id="lblNomeRazao">Nome *</label>
+                <input type="text" name="nomeRazao" id="input_nomeRazao" class="w3-input w3-border w3-round-large" required autofocus>
+
+                <label>e-mail *</label>
+                <input type="email" name="usrname" id="input_UserSignIn" class="w3-input w3-border w3-round-large" required>
+
+                <div class="w3-row">
+                    <div class="w3-half">
+                        <label>Senha *</label>
+                        <input type="password" name="psw" id="input_psw" class="w3-input w3-border w3-round-large" style="width: 95%" required>
+                    </div>
+                    <div class="w3-half">
+                        <label>Confirme a Senha *</label>
+                        <input type="password" name="pswConf" id="input_pswConf" class="w3-input w3-border w3-round-large" required>
+                    </div>
+                </div>
+
+                <div class="w3-row">
+                    <div class="w3-threequarter">
+                        <label>Endereço *</label>
+                        <input type="text" name="endereco" id="input_endereco" class="w3-input w3-border w3-round-large" style="width: 95%" required>
+                    </div>
+                    <div class="w3-quarter">
+                        <label>Número *</label>
+                        <input type="text" name="numero" id="input_numero" class="w3-input w3-border w3-round-large">
+                    </div>
+                </div>
+
+                <div class="w3-row">
+                    <label>Complemento</label>
+                    <input type="text" name="complemento" id="input_complemento" class="w3-input w3-border w3-round-large">
+                </div>
+
+                <div class="w3-row">
+                    <label>Telefone *</label>
+                    <input type="text" name="telefone" id="input_telefone" class="w3-input w3-border w3-round-large" required>
+                </div>
+
+                <div id="divCOG" style="display: none" class="w3-center">
+                    <p>Aguarde <i class="fa fa-cog fa-spin fa-2x fa-fw"></i></p>
+                </div>
+
+                <div class="w3-section">
+                    <input id="btSignIn" type="button" class="w3-button w3-block w3-blue w3-hover-light-blue w3-section w3-padding" onclick="NovoUsuario();" value="Salvar" />
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <!-- Script Autocomplete Endereço-->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOmedP-f3N7W7CPxaRoCZJ5mTMm6g0Ycc&libraries=places"></script>
+    <script type="text/javascript" src="scripts/codeAutoComplete.js"></script>     
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -727,6 +788,10 @@
     <script src="js/contact_me.js"></script>
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
+
+
+    <!-- Scripts diversas -->
+    <script type="text/javascript" src="scripts/codeLogin.js"></script>
 </body>
 
 </html>

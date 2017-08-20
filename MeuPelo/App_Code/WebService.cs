@@ -58,6 +58,43 @@ public class WebService : System.Web.Services.WebService
         return url;
     }
 
+
+    [WebMethod]
+    public string login(string param1, string param2)
+    {
+
+        string Identificador_msg = "0";
+
+        // localiza usuario
+        string stringSelect = "select senha,nome,ID_user from tbl_usuarios where usuario = '" + param1 + "'";
+        OperacaoBanco Identificador_Operacao = new OperacaoBanco();
+        SqlDataReader Identificador_rcrdset = Identificador_Operacao.Select(stringSelect);
+        while (Identificador_rcrdset.Read())
+        {
+            if (param2 == Convert.ToString(Identificador_rcrdset[0]))
+            {
+                string vValida1, vValida2;
+                vValida1 = DateTime.Now.ToString("dd");
+                vValida2 = DateTime.Now.ToString("MM");
+                int vValida3 = Convert.ToInt16(vValida1) * Convert.ToInt16(vValida2);
+                string vValida4 = vValida3.ToString();
+
+                Identificador_msg = "Redirect.aspx" +
+                    "?v1=" + Convert.ToString(Identificador_rcrdset[2])+
+                    "&v2=" + Convert.ToString(Identificador_rcrdset[1]) +
+                    "&v3=" + vValida4;
+            }
+            else
+            {
+                Identificador_msg = "2";
+            }
+        }
+        ConexaoBancoSQL.fecharConexao();
+
+        return Identificador_msg;
+
+    }
+
 }
 
 
@@ -76,7 +113,7 @@ public class ConexaoBancoSQL
     public ConexaoBancoSQL()
     {
         // *** STRING DE CONEXÃO COM BANCO DE DADOS - Atenção! Alterar dados conforme seu servidor
-        stringconnection1 = "Server=tcp:serverlogvai.database.windows.net,1433;Initial Catalog=dblogvai;Persist Security Info=False;User ID=admserver;Password=pwd@2017;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        stringconnection1 = "Server=tcp:servermeupelo.database.windows.net,1433;Initial Catalog=dbMeuPelo;Persist Security Info=False;User ID=admserver;Password=Pwd@2017;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         try
         {
             tentarAbrirConexaoRemota();
