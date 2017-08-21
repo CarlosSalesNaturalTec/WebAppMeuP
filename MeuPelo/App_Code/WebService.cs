@@ -66,7 +66,7 @@ public class WebService : System.Web.Services.WebService
         string Identificador_msg = "0";
 
         // localiza usuario
-        string stringSelect = "select senha,nome,ID_user from tbl_usuarios where usuario = '" + param1 + "'";
+        string stringSelect = "select senha,ID_user from tbl_usuarios where usuario = '" + param1 + "'";
         OperacaoBanco Identificador_Operacao = new OperacaoBanco();
         SqlDataReader Identificador_rcrdset = Identificador_Operacao.Select(stringSelect);
         while (Identificador_rcrdset.Read())
@@ -80,9 +80,8 @@ public class WebService : System.Web.Services.WebService
                 string vValida4 = vValida3.ToString();
 
                 Identificador_msg = "Redirect.aspx" +
-                    "?v1=" + Convert.ToString(Identificador_rcrdset[2])+
-                    "&v2=" + Convert.ToString(Identificador_rcrdset[1]) +
-                    "&v3=" + vValida4;
+                    "?v1=" + vValida4 +
+                    "&v2=" + Convert.ToString(Identificador_rcrdset[1]);
             }
             else
             {

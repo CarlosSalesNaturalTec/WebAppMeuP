@@ -35,7 +35,6 @@ function TentarLogin() {
 
             document.getElementById('btentrar').style.cursor = "default";
             document.getElementById('btentrar').disabled = false;
-            document.getElementById('id01').style.display = "none";
 
             switch (response.d) {
                 case "0":

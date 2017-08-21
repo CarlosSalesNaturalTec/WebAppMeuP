@@ -11,13 +11,11 @@ public partial class Redirect : System.Web.UI.Page
         int vValida3 = Convert.ToInt16(vValida1) * Convert.ToInt16(vValida2);
         string vValida4 = vValida3.ToString();
 
-        string param = Request.QueryString["v3"];
+        string param = Request.QueryString["v1"];
         if (param == vValida4)
         {
-            Session["UserID"] = Request.QueryString["v1"];
-            Session["UserName"] = Request.QueryString["v2"];
-
-            Response.Redirect("CAD_Lojista.html");
+            Session["UserID"] = Request.QueryString["v2"];
+            Response.Redirect("CAD_Lojista.aspx");
         }
         else
         {
