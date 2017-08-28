@@ -17,11 +17,10 @@ public partial class CAD_Lojista : System.Web.UI.Page
     private void PreencheCampos(string IDAux)
     {
         string stringSelect = "select nome ,usuario, endereco,numero ,complemento ,telefone, urlGoogle , urlFacebook, urlInstagran " +
-            "from tbl_usuarios " +
-            "where ID_User = '" + IDAux + "'";
+            "from Tbl_Lojistas " +
+            "where ID_Lojista  = '" + IDAux + "'";
 
         int Percent = 20;
-        int concluir = 100 - Percent;
         string ScriptDados = "";
 
         OperacaoBanco Identificador_Operacao = new OperacaoBanco();
@@ -35,19 +34,15 @@ public partial class CAD_Lojista : System.Web.UI.Page
             txt_complem.Text = Convert.ToString(Identificador_rcrdset[4]);
             txt_tel.Text = Convert.ToString(Identificador_rcrdset[5]);
 
-            if (Convert.ToString(Identificador_rcrdset[6]) != ""){Percent+=20;}
+            if (Convert.ToString(Identificador_rcrdset[6]) != "") {Percent +=20;}
             if (Convert.ToString(Identificador_rcrdset[7]) != "") { Percent += 20; }
             if (Convert.ToString(Identificador_rcrdset[8]) != "") { Percent += 20; }
 
         }
         ConexaoBancoSQL.fecharConexao();
 
-        // Auxiliar - dados para gráfico (percentual de ficha concluido)        
         str.Clear();
-        ScriptDados = "<input type=\"hidden\" id=\"AuxConcluido\" value= \"" + Percent.ToString() + "\"/>"; 
-        str.Append(ScriptDados);
-
-        ScriptDados = "<input type=\"hidden\" id=\"AuxConcluir\" value= \"" + concluir.ToString() + "\"/>";
+        ScriptDados = "<input type=\"hidden\" id=\"idAux\" value= \"" + IDAux + "\"/>";
         str.Append(ScriptDados);
 
         Literal1_Aux.Text = str.ToString();

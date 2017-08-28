@@ -23,15 +23,15 @@ public class WebService : System.Web.Services.WebService
         string url = "Sorry.html";
 
         OperacaoBanco operacao = new OperacaoBanco();
-        bool inserir = operacao.Insert("INSERT INTO Tbl_Usuarios (nome ,usuario,senha,endereco,numero,complemento,telefone,dataCadastro) " +
+        bool inserir = operacao.Insert("INSERT INTO Tbl_Lojistas (nome ,usuario,senha,endereco,numero,complemento,telefone,dataCadastro) " +
             "VALUES ('" + param1 + "', '" + param2 + "', '" + param3 + "', '" + param4 + "', '" + param5 +
             "', '" + param6 + "', '" + param7 + "', dateadd(hh,-3,getdate()) )");
         ConexaoBancoSQL.fecharConexao();
 
         if (inserir == true)
         {
-            string stringselect = "select ID_User,nome,usuario " +
-                "from Tbl_Usuarios " +
+            string stringselect = "select ID_Lojista,nome,usuario " +
+                "from Tbl_Lojistas " +
                 "where usuario='" + param2 + "' and senha='" + param3 + "' ";
 
             OperacaoBanco operacao1 = new OperacaoBanco();
@@ -58,7 +58,6 @@ public class WebService : System.Web.Services.WebService
         return url;
     }
 
-
     [WebMethod]
     public string login(string param1, string param2)
     {
@@ -66,7 +65,7 @@ public class WebService : System.Web.Services.WebService
         string Identificador_msg = "0";
 
         // localiza usuario
-        string stringSelect = "select senha,ID_user from tbl_usuarios where usuario = '" + param1 + "'";
+        string stringSelect = "select senha,ID_Lojista from Tbl_Lojistas where usuario = '" + param1 + "'";
         OperacaoBanco Identificador_Operacao = new OperacaoBanco();
         SqlDataReader Identificador_rcrdset = Identificador_Operacao.Select(stringSelect);
         while (Identificador_rcrdset.Read())
@@ -93,6 +92,33 @@ public class WebService : System.Web.Services.WebService
         return Identificador_msg;
 
     }
+
+
+
+    [WebMethod]
+    public string salvarlink1(string param1, string param2, string param3, string param4)
+    {
+        string url = "";
+
+        OperacaoBanco operacao4 = new OperacaoBanco();
+        bool salvarlink = operacao4.Update("update Tbl_Lojistas set " +
+            param1 + " = '" + param2 + "'" +
+            "where ID_Lojista  =" + param3);  
+
+        ConexaoBancoSQL.fecharConexao();
+
+        if (salvarlink)
+        {
+            url = param4;
+        }
+        
+
+        return url;
+
+
+    }
+
+
 
 }
 
