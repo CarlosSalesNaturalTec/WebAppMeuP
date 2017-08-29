@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Meu Pelô - Área do Lojista</title>
+    <title>Meu Pelô - Área do Lojista - Dados Lojista</title>
 
     <!-- Jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -30,43 +30,6 @@
 
 <body style="margin-left: 2%; margin-right: 2%">
     <br />
-
-    <!-- Menu -->
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Meu Pelô - Painel do Lojista</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Redes Sociais<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#GooglePanel">Google</a></li>
-                            <li><a href="#FacebookPanel">Facebook</a></li>
-                            <li><a href="#InstagranPanel">Instagran</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Produtos<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#GooglePanel">Cadastro</a></li>
-                            <li><a href="#FacebookPanel">Ofertas</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Financeiro</a></li>
-                    <li><a href="#" onclick="LogOut()">Sair&nbsp;<span class="glyphicon glyphicon-off"></span></a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
 
     <!-- Dados do Lojista -->
     <div class="w3-row w3-container w3-border w3-round w3-padding-16 w3-light-gray">
@@ -126,7 +89,6 @@
         <p>&nbsp;</p>
     </div>
 
-
     <!-- Segunda SEÇÃO -->
     <div class="w3-row w3-container w3-border w3-round w3-padding-16 w3-light-gray">
 
@@ -140,9 +102,9 @@
                 </div>
 
                 <div class="panel-body">
-                    <div class="w3-center" style="width: 100%; height: 200px; margin: 0 auto">
+                    <div class="w3-center" style="width: 100%; height: 140px; margin: 0 auto">
                         <i class="fa fa-5x fa-barcode" aria-hidden="true"></i>
-                       <a type="button"  href="CAD_Produtos.aspx" class="w3-btn w3-round w3-block w3-blue">Produtos</a>
+                        <a onclick="window.location.href ='CAD_Produtos_Listagem.aspx'" class="btn btn-block btn-primary">Produtos</a>
                     </div>
                 </div>
 
@@ -158,10 +120,7 @@
     
     <!-- Auxiliares -->
     <asp:Literal ID="Literal1_Aux" runat="server"></asp:Literal>
-    <script type="text/javascript" src="scripts/codeCad_Lojista.js"></script>
-
-
-  
+     
 </body>
 
 </html>

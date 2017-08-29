@@ -15,7 +15,7 @@ public partial class Redirect : System.Web.UI.Page
         if (param == vValida4)
         {
             Session["UserID"] = Request.QueryString["v2"];
-            Response.Redirect("CAD_Lojista.aspx");
+            Response.Redirect("Painel.aspx");
         }
         else
         {

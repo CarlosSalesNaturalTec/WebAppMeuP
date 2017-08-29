@@ -25,7 +25,7 @@ public class WebService : System.Web.Services.WebService
         OperacaoBanco operacao = new OperacaoBanco();
         bool inserir = operacao.Insert("INSERT INTO Tbl_Lojistas (nome ,usuario,senha,endereco,numero,complemento,telefone,dataCadastro) " +
             "VALUES ('" + param1 + "', '" + param2 + "', '" + param3 + "', '" + param4 + "', '" + param5 +
-            "', '" + param6 + "', '" + param7 + "', dateadd(hh,-3,getdate()) )");
+            "', '" + param6 + "', '" + param7 + "', getdate() )");
         ConexaoBancoSQL.fecharConexao();
 
         if (inserir == true)
@@ -119,6 +119,98 @@ public class WebService : System.Web.Services.WebService
     }
 
 
+
+    [WebMethod]
+    public string ProdutoExcluir(string param1)
+    {
+        string url;
+
+        OperacaoBanco operacao3 = new OperacaoBanco();
+        Boolean deletar = operacao3.Delete("delete from Tbl_Produtos where ID_Produto =" + param1);   
+        ConexaoBancoSQL.fecharConexao();
+
+        if (deletar == true)
+        {
+            url = "CAD_Produtos_Listagem.aspx"; 
+        }
+        else
+        {
+            url = "Sorry.aspx";
+        }
+
+        return url;
+    }
+
+    [WebMethod]
+    public string ProdutoSalvar(string param0, string param1, string param2, string param3, string param4, string param5, 
+        string param6, string param7, string param8, string param9)
+    {
+        string url;
+        
+        OperacaoBanco operacaoInst2 = new OperacaoBanco();
+        Boolean inserirUser = operacaoInst2.Insert("INSERT INTO Tbl_Produtos (Nome , categoria  , unidade , preco_normal , preco_oferta , " +
+           "ofertar , ofertar_quant , brinde , brinde_quant, ID_Lojista ) " +
+           "VALUES (" +
+           "'" + param0 + "'," +
+           "'" + param1 + "'," +
+           "'" + param2 + "'," +
+           param3 + "," +
+           param4 + "," +
+           "'" + param5 + "'," +
+           param6 + "," +
+           "'" + param7 + "'," +
+           param8 + "," +
+           param9 + ")"
+           );
+
+        ConexaoBancoSQL.fecharConexao();
+
+        if (inserirUser == true)
+        {
+            url = "CAD_Produtos_Listagem.aspx";
+        }
+        else
+        {
+            url = "NÃO FOI POSSIVEL INCLUIR PRODUTO";
+        }
+
+        return url;
+    }
+
+
+    [WebMethod]
+    public string ProdutoAlterar(string param0, string param1, string param2, string param3, string param4, string param5,
+        string param6, string param7, string param8, string param9)
+    {
+        string url;
+
+        OperacaoBanco operacao4 = new OperacaoBanco();
+        // <!--*******Customização*******-->
+        bool alterar = operacao4.Update("update Tbl_Produtos set " +
+            "Nome = '" + param0 + "'," +
+            "categoria = '" + param1 + "'," +
+            "unidade = '" + param2 + "'," +
+            "preco_normal = " + param3 + "," +
+            "preco_oferta = " + param4 + "," +
+            "ofertar = '" + param5 + "'," +
+            "ofertar_quant = " + param6 + "," +
+            "brinde = '" + param7 + "'," +
+            "brinde_quant = " + param8 + "," +
+            "where ID_Produto  =" + param9);  
+
+        ConexaoBancoSQL.fecharConexao();
+
+        if (alterar == true)
+        {
+            url = "CAD_Produtos_Listagem.aspx";   
+        }
+        else
+        {
+            url = "NÃO FOI POSSIVEL INCLUIR PRODUTO";
+        }
+
+        return url;
+    }
 
 }
 
