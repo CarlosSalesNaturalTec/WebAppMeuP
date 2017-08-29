@@ -17,12 +17,12 @@
 </head>
 <body>
     <!--*******MENU LATERAL - Customização*******-->
-    <div class="w3-sidebar w3-bar-block w3-blue w3-card-2" style="width: 180px">
+    <div class="w3-sidebar w3-bar-block w3-light-blue w3-card-2" style="width: 180px">
         <hr />
-        <button id="bt1" class="w3-bar-item w3-button tablink w3-hover-light-blue w3-blue" onclick="openLink(event, 'grupo1')"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Descrição</button>
-        <button id="bt2" class="w3-bar-item w3-button tablink w3-hover-light-blue" onclick="openLink(event, 'grupo2')"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Imagens</button>
-        <button id="bt3" class="w3-bar-item w3-button tablink w3-hover-light-blue" onclick="openLink(event, 'grupo3')"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Estoque</button>
-        <button id="bt4" class="w3-bar-item w3-button tablink w3-hover-light-blue" onclick="openLink(event, 'grupo4')"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Vendas</button>
+        <button id="bt1" class="w3-bar-item w3-button tablink w3-hover-blue" onclick="openLink(event, 'grupo1')"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Descrição</button>
+        <button id="bt2" class="w3-bar-item w3-button tablink w3-hover-blue" onclick="openLink(event, 'grupo2')"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Imagens</button>
+        <button id="bt3" class="w3-bar-item w3-button tablink w3-hover-blue" onclick="openLink(event, 'grupo3')"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Estoque</button>
+        <button id="bt4" class="w3-bar-item w3-button tablink w3-hover-blue" onclick="openLink(event, 'grupo4')"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Vendas</button>
         <hr />
     </div>
 
@@ -58,17 +58,17 @@
                         <div class="form-group">
                             <label for="inputund" class="col-md-2 control-label">Unidade</label>
                             <div class="col-md-2">
-                                <input type="text" class="form-control" id="inputund">
+                                <input type="text" class="form-control" id="inputund" value="UND">
                             </div>
 
                             <label for="inputnormal" class="col-md-2 control-label">Preço Normal</label>
                             <div class="col-md-2">
-                                <input type="number" class="form-control" id="inputnormal">
+                                <input type="number" class="form-control" id="inputnormal" value="0">
                             </div>
 
                             <label for="inputdesc" class="col-md-2 control-label">Preço c/ Desconto</label>
                             <div class="col-md-2">
-                                <input type="number" class="form-control" id="inputdesc">
+                                <input type="number" class="form-control" id="inputdesc" value="0">
                             </div>
                         </div>
 
@@ -83,7 +83,7 @@
 
                             <label for="inputofertquant" class="col-md-2 control-label">Quantidade</label>
                             <div class="col-md-2">
-                                <input type="number" class="form-control" id="inputofertquant">
+                                <input type="number" class="form-control" id="inputofertquant" value="0">
                             </div>
                         </div>
 
@@ -97,7 +97,7 @@
                             </div>
                             <label for="inputbrindequant" class="col-md-2 control-label">Quantidade</label>
                             <div class="col-md-2">
-                                <input type="number" class="form-control" id="inputbrindequant">
+                                <input type="number" class="form-control" id="inputbrindequant" value="0">
                             </div>
                         </div>
 
@@ -110,17 +110,17 @@
                 <br />
                 <div class="col-md-2"></div>
                 <p>
-                    <button class="w3-btn w3-round w3-border w3-light-green w3-hover-green btcontroles" onclick="cancelar()">
+                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="cancelar()">
                         <i class="fa fa-undo" aria-hidden="true"></i>&nbsp;Sair</button>
 
-                    <button class="w3-btn w3-round w3-border w3-light-green w3-hover-green btcontroles" onclick="classeBt2()">
+                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="classeBt2()">
                         <i class="fa fa-forward" aria-hidden="true"></i>&nbsp;Avançar</button>
 
-                    <button class="w3-btn w3-round w3-border w3-light-green w3-hover-green btcontroles" onclick="SalvarRegistro()">
+                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="SalvarRegistro()">
                         <i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Salvar&nbsp;&nbsp;
                     </button>
 
-                    <i style="display: none" class="aguarde fa-2x fa fa-cog fa-spin fa-fw w3-text-green w3-right"></i>
+                    <i style="display: none" class="aguarde fa-2x fa fa-cog fa-spin fa-fw w3-text-blue w3-right"></i>
                 </p>
             </div>
             <!-- Botões Controle -->
@@ -145,20 +145,20 @@
                 <br />
                 <div class="col-md-2"></div>
                 <p>
-                    <button class="w3-btn w3-round w3-border w3-light-green w3-hover-green btcontroles" onclick="cancelar()">
+                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="cancelar()">
                         <i class="fa fa-undo" aria-hidden="true"></i>&nbsp;Sair</button>
 
-                    <button class="w3-btn w3-round w3-border w3-light-green w3-hover-green btcontroles" onclick="btvoltar1()">
+                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="btvoltar1()">
                         <i class="fa fa-backward" aria-hidden="true"></i>&nbsp;Voltar</button>
 
-                    <button class="w3-btn w3-round w3-border w3-light-green w3-hover-green btcontroles" onclick="classeBt3()">
+                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="classeBt3()">
                         <i class="fa fa-forward" aria-hidden="true"></i>&nbsp;Avançar</button>
 
-                    <button class="w3-btn w3-round w3-border w3-light-green w3-hover-green btcontroles" onclick="SalvarRegistro()">
+                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="SalvarRegistro()">
                         <i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Salvar&nbsp;
                     </button>
 
-                    <i style="display: none" class="aguarde fa-2x fa fa-cog fa-spin fa-fw w3-text-green w3-right"></i>
+                    <i style="display: none" class="aguarde fa-2x fa fa-cog fa-spin fa-fw w3-text-blue w3-right"></i>
                 </p>
             </div>
             <!-- Botões Controle -->
@@ -183,20 +183,20 @@
                 <br />
                 <div class="col-md-2"></div>
                 <p>
-                    <button class="w3-btn w3-round w3-border w3-light-green w3-hover-green btcontroles" onclick="cancelar()">
+                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="cancelar()">
                         <i class="fa fa-undo" aria-hidden="true"></i>&nbsp;Sair</button>
 
-                    <button class="w3-btn w3-round w3-border w3-light-green w3-hover-green btcontroles" onclick="btvoltar2()">
+                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="btvoltar2()">
                         <i class="fa fa-backward" aria-hidden="true"></i>&nbsp;Voltar</button>
 
-                    <button class="w3-btn w3-round w3-border w3-light-green w3-hover-green btcontroles" onclick="classeBt4()">
+                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="classeBt4()">
                         <i class="fa fa-forward" aria-hidden="true"></i>&nbsp;Avançar</button>
 
-                    <button class="w3-btn w3-round w3-border w3-light-green w3-hover-green btcontroles" onclick="SalvarRegistro()">
+                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="SalvarRegistro()">
                         <i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Salvar&nbsp;
                     </button>
 
-                    <i style="display: none" class="aguarde fa-2x fa fa-cog fa-spin fa-fw w3-text-green w3-right"></i>
+                    <i style="display: none" class="aguarde fa-2x fa fa-cog fa-spin fa-fw w3-text-blue w3-right"></i>
                 </p>
             </div>
             <!-- Botões Controle -->
@@ -219,17 +219,17 @@
                 <br />
                 <div class="col-md-2"></div>
                 <p>
-                    <button class="w3-btn w3-round w3-border w3-light-green w3-hover-green btcontroles" onclick="cancelar()">
+                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="cancelar()">
                         <i class="fa fa-undo" aria-hidden="true"></i>&nbsp;Sair</button>
 
-                    <button class="w3-btn w3-round w3-border w3-light-green w3-hover-green btcontroles" onclick="btvoltar3()">
+                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="btvoltar3()">
                         <i class="fa fa-backward" aria-hidden="true"></i>&nbsp;Voltar</button>
 
-                    <button class="w3-btn w3-round w3-border w3-light-green w3-hover-green btcontroles" onclick="SalvarRegistro()">
+                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="SalvarRegistro()">
                         <i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Salvar&nbsp;
                     </button>
 
-                    <i style="display: none" class="aguarde fa-2x fa fa-cog fa-spin fa-fw w3-text-green w3-right"></i>
+                    <i style="display: none" class="aguarde fa-2x fa fa-cog fa-spin fa-fw w3-text-blue w3-right"></i>
                 </p>
             </div>
             <!-- Botões Controle -->
@@ -244,7 +244,7 @@
     <asp:Literal ID="Literal1" runat="server"></asp:Literal>
 
     <!-- Scripts Diversos  -->
-    <script type="text/javascript" src="Scripts/codeProdutos_Novo.js"></script>
+    <script type="text/javascript" src="scripts/codeProdutos_Novo.js"></script>
 
 </body>
 </html>

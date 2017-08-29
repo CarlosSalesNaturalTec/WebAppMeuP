@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Text;
 
 public partial class CAD_Produtos_Listagem : System.Web.UI.Page
@@ -26,13 +27,13 @@ public partial class CAD_Produtos_Listagem : System.Web.UI.Page
         string stringcomaspas = "<table id=\"tabela\" class=\"table table-striped table-hover \">" +
             "<thead>" +
             "<tr>" +
-            "<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRODUTO</th>" +
-            "<th>CATEGORIA</th>" +
-            "<th>UND</th>" +
-            "<th>ESTOQUE</th>" +
-            "<th align='right'>PREÇO NORMAL</th>" +
-            "<th align='right'>PREÇO C/ DESC.</th>" +
             "<th>.</th>" +
+            "<th>PRODUTO</th>" +
+            "<th>CATEGORIA</th>" +
+            "<th>ESTOQUE</th>" +
+            "<th>UND</th>" +
+            "<th>PREÇO NORMAL</th>" +
+            "<th>PREÇO C/ DESC.</th>" +
             "</tr>" +
             "</thead>" +
             "<tbody>";
@@ -43,37 +44,43 @@ public partial class CAD_Produtos_Listagem : System.Web.UI.Page
     private void dadosCorpo()
     {
         // <!--*******Customização*******-->
-        string stringselect = "select ID_Produto, nome, categoria, unidade, estoque , preco_normal , preco_oferta   " +
+        string stringselect = "select ID_Produto, nome, categoria, estoque , unidade, preco_normal , preco_oferta   " +
                 "from Tbl_Produtos " +
                 "where ID_Lojista = " + iduser +
                 " order by Nome"; 
         OperacaoBanco operacao = new OperacaoBanco();
         System.Data.SqlClient.SqlDataReader dados = operacao.Select(stringselect);
-
+        
         while (dados.Read())
         {
             // <!--*******Customização*******-->
             string Coluna0 = Convert.ToString(dados[0]); //id
-            string Coluna1 = Convert.ToString(dados[1]);
+            string Coluna1 = Convert.ToString(dados[1]); 
             string Coluna2 = Convert.ToString(dados[2]);
-            string Coluna3 = Convert.ToString(dados[3]);
-            string Coluna4 = Convert.ToString(dados[4]);
-            string Coluna5 = Convert.ToString(dados[5]);
-            string Coluna6 = Convert.ToString(dados[6]);
+            string Coluna3 = Convert.ToString(dados[3]);    //estoque
+            string Coluna4 = Convert.ToString(dados[4]);  //unidade
+            string Coluna5 = Convert.ToString(dados[5]);  //preco normal
+            string Coluna6 = Convert.ToString(dados[6]);    // preco oferta
+
+            decimal valor = Convert.ToDecimal(dados[5]);
+            string Coluna5a = "R$ " + valor.ToString("N", CultureInfo.CreateSpecificCulture("pt-BR"));
+
+            valor = Convert.ToDecimal(dados[6]);
+            string Coluna6a = "R$ " + valor.ToString("N", CultureInfo.CreateSpecificCulture("pt-BR"));
 
             // <!--*******Customização*******-->
-            string bt1 = "<a class='w3-btn w3-round w3-hover-blue w3-text-green' href='CAD_Produtos_Ficha.aspx?v1=" + Coluna0 + "'><i class='fa fa-id-card-o' aria-hidden='true'></i></a>";
-            string bt2 = "<a class='w3-btn w3-round w3-hover-red w3-text-green' onclick='Excluir(" + Coluna0 + ")'><i class='fa fa-trash-o' aria-hidden='true'></i></a>&nbsp;&nbsp;";
+            string bt1 = "<a class='w3-btn w3-round w3-hover-blue w3-text-blue' href='CAD_Produtos_Ficha.aspx?v1=" + Coluna0 + "'><i class='fa fa-id-card-o' aria-hidden='true'></i></a>";
+            string bt2 = "<a class='w3-btn w3-round w3-hover-red w3-text-blue' onclick='Excluir(" + Coluna0 + ")'><i class='fa fa-trash-o' aria-hidden='true'></i></a>&nbsp;&nbsp;";
 
             // <!--*******Customização*******-->
             string stringcomaspas = "<tr>" +
+                "<td>" + bt1 + bt2 + "</td>" +
                 "<td>" + Coluna1 + "</td>" +
                 "<td>" + Coluna2 + "</td>" +
                 "<td>" + Coluna3 + "</td>" +
                 "<td>" + Coluna4 + "</td>" +
-                "<td>" + Coluna5 + "</td>" +
-                "<td>" + Coluna6 + "</td>" +
-                "<td>" + bt1 + bt2 + "</td>" +
+                "<td>" + Coluna5a + "</td>" +
+                "<td>" + Coluna6a + "</td>" +
                 "</tr>";
 
             str.Append(stringcomaspas);

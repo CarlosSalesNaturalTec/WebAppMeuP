@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head runat="server">
-    
+
     <title>Listagem de Produtos</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,16 +20,20 @@
     <!-- Header  -->
     <p></p>
     <div class="w3-container w3-border w3-round w3-padding-16 w3-light-blue" style="margin-left: 2%; margin-right: 2%">
-        <small><i class="fa fa-calendar-check-o fa-2x"></i>&nbsp;&nbsp;Total de Produtos Cadastrados:   <!--*******Customização*******-->
-            <asp:Literal ID="lblTotalRegistros" runat="server"></asp:Literal></small> 
+        <small><i class="fa fa-calendar-check-o fa-2x"></i>&nbsp;&nbsp;Total de Produtos Cadastrados:  
+            <!--*******Customização*******-->
+            <asp:Literal ID="lblTotalRegistros" runat="server"></asp:Literal></small>
         &nbsp;&nbsp;
-        <button class="w3-btn w3-round w3-border w3-blue w3-right" onclick="NovoRegistro()"><i class="fa fa-plus"></i>&nbsp;Novo Produto</button>  <!--*******Customização*******-->
+        <button class="w3-btn w3-round w3-border w3-blue w3-right" onclick="NovoRegistro()"><i class="fa fa-plus"></i>&nbsp;Novo Produto</button>
+        <!--*******Customização*******-->
     </div>
     <br />
 
-     <!-- GRID  -->
+    <!-- GRID  -->
     <div class="w3-container w3-border w3-round w3-padding-16 w3-light-gray w3-small" style="margin-left: 2%; margin-right: 2%">
-        <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+        <div class="table-responsive">
+            <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+        </div>
     </div>
 
 
@@ -39,7 +43,7 @@
 
             <form class="w3-container">
                 <div class="w3-section w3-center">
-                    <header class="w3-container w3-green w3-center">
+                    <header class="w3-container w3-blue w3-center">
                         <h4><strong>Atenção</strong></h4>
                     </header>
                     <br />
@@ -48,8 +52,8 @@
                     <h3><strong>Confirma Exclusão?</strong> </h3>
                     <br />
                     <p>
-                        <button type="button" class="w3-button w3-round w3-border w3-light-green w3-hover-green" onclick="Excluir_cancel()">Não</button>&nbsp;&nbsp;&nbsp;
-                        <button type="button" class="w3-button w3-round w3-border w3-light-green w3-hover-red" onclick="ExcluirRegistro()">Sim</button>
+                        <button type="button" class="w3-button w3-round w3-border w3-light-blue w3-hover-blue" onclick="Excluir_cancel()">Não</button>&nbsp;&nbsp;&nbsp;
+                        <button type="button" class="w3-button w3-round w3-border w3-light-blue w3-hover-red" onclick="ExcluirRegistro()">Sim</button>
                     </p>
                     <br />
                 </div>
@@ -60,7 +64,8 @@
 
 
     <!-- Scripts Diversos -->
-    <script type="text/javascript" src="Scripts/codeProdutos_Listagem.js"></script>   <!--*******Customização*******-->
+    <script type="text/javascript" src="Scripts/codeProdutos_Listagem.js"></script>
+    <!--*******Customização*******-->
 
 </body>
 </html>

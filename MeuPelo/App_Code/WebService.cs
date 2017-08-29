@@ -185,18 +185,17 @@ public class WebService : System.Web.Services.WebService
         string url;
 
         OperacaoBanco operacao4 = new OperacaoBanco();
-        // <!--*******Customização*******-->
         bool alterar = operacao4.Update("update Tbl_Produtos set " +
             "Nome = '" + param0 + "'," +
             "categoria = '" + param1 + "'," +
             "unidade = '" + param2 + "'," +
-            "preco_normal = " + param3 + "," +
-            "preco_oferta = " + param4 + "," +
+            "preco_normal = " + param3 + " ," +
+            "preco_oferta = " + param4 + " ," +
             "ofertar = '" + param5 + "'," +
-            "ofertar_quant = " + param6 + "," +
+            "ofertar_quant = " + param6 + " ," +
             "brinde = '" + param7 + "'," +
-            "brinde_quant = " + param8 + "," +
-            "where ID_Produto  =" + param9);  
+            "brinde_quant = " + param8 + "  " +
+            "where ID_Produto =" + param9);  
 
         ConexaoBancoSQL.fecharConexao();
 
@@ -206,7 +205,7 @@ public class WebService : System.Web.Services.WebService
         }
         else
         {
-            url = "NÃO FOI POSSIVEL INCLUIR PRODUTO";
+            url = "Sorry.html";
         }
 
         return url;
