@@ -16,254 +16,182 @@
 
 </head>
 <body>
-    <!--*******MENU LATERAL - Customização*******-->
-    <div class="w3-sidebar w3-bar-block w3-light-blue w3-card-2" style="width: 180px">
-        <hr />
-        <button id="bt1" class="w3-bar-item w3-button tablink w3-hover-blue" onclick="openLink(event, 'grupo1')"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Descrição</button>
-        <button id="bt2" class="w3-bar-item w3-button tablink w3-hover-blue" onclick="openLink(event, 'grupo2')"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Imagens</button>
-        <button id="bt3" class="w3-bar-item w3-button tablink w3-hover-blue" onclick="openLink(event, 'grupo3')"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Estoque</button>
-        <button id="bt4" class="w3-bar-item w3-button tablink w3-hover-blue" onclick="openLink(event, 'grupo4')"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Vendas</button>
-        <hr />
-    </div>
 
-    <div style="margin-left: 180px">
+    <!-- GRUPO 1 -->
+    <div id="grupo1" class="w3-container" style="display: block">
+        <!--*******DEscrição do Produto*******-->
+        <div class="col-md-12 col-lg-12 w3-border w3-light-gray" style="margin-top: 20px">
 
-        <!-- GRUPO 1 -->
-        <div id="grupo1" class="w3-container grupo w3-animate-left" style="display: block">
+            <h3><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Descrição</h3>
             <br />
-            <div class="col-md-12 col-lg-12 w3-border w3-round w3-light-gray">
-                <h3><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Descrição</h3>
-            </div>
 
-            <div class="col-md-12 col-lg-12 w3-border w3-light-gray" style="margin-top: 20px">
+            <form class="form-horizontal">
+                <fieldset>
+                    <br />
+                    <div class="form-group">
+                        <label for="input1" class="col-md-1 control-label">Nome</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" id="input1">
+                        </div>
+                        <label for="input2" class="col-md-1 control-label">Categoria</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" id="input2">
+                        </div>
+                    </div>
 
-                <form class="form-horizontal">
-                    <!--*******Customização*******-->
-                    <fieldset>
-                        <br />
-                        <div class="form-group">
-                            <label for="input1" class="col-md-2 control-label">Nome</label>
-                            <div class="col-md-9">
-                                <input type="text" class="form-control" id="input1">
-                            </div>
+                    <div class="form-group">
+                        <label for="inputund" class="col-md-1 control-label">Unidade</label>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control" id="inputund">
                         </div>
 
-                        <div class="form-group">
-                            <label for="input2" class="col-md-2 control-label">Categoria</label>
-                            <div class="col-md-9">
-                                <input type="text" class="form-control" id="input2">
-                            </div>
+                        <label for="inputnormal" class="col-md-2 control-label">Preço Normal</label>
+                        <div class="col-md-2">
+                            <input type="number" class="form-control" id="inputnormal">
                         </div>
 
-                        <div class="form-group">
-                            <label for="inputund" class="col-md-2 control-label">Unidade</label>
-                            <div class="col-md-2">
-                                <input type="text" class="form-control" id="inputund">
-                            </div>
+                        <label for="inputdesc" class="col-md-2 control-label">Preço c/ Desconto</label>
+                        <div class="col-md-2">
+                            <input type="number" class="form-control" id="inputdesc">
+                        </div>
+                    </div>
 
-                            <label for="inputnormal" class="col-md-2 control-label">Preço Normal</label>
-                            <div class="col-md-2">
-                                <input type="number" class="form-control" id="inputnormal">
-                            </div>
-
-                            <label for="inputdesc" class="col-md-2 control-label">Preço c/ Desconto</label>
-                            <div class="col-md-2">
-                                <input type="number" class="form-control" id="inputdesc">
-                            </div>
+                    <div class="form-group">
+                        <label for="selectofertar" class="col-md-1 control-label">Ofertar</label>
+                        <div class="col-md-2">
+                            <select class="form-control" id="selectofertar">
+                                <option value="NÃO">NÃO</option>
+                                <option value="SIM">SIM</option>
+                            </select>
                         </div>
 
-                        <div class="form-group">
-                            <label for="selectofertar" class="col-md-2 control-label">Ofertar</label>
-                            <div class="col-md-2">
-                                <select class="form-control" id="selectofertar">
-                                    <option value="NÃO">NÃO</option>
-                                    <option value="SIM">SIM</option>
-                                </select>
-                            </div>
-
-                            <label for="inputofertquant" class="col-md-2 control-label">Quantidade</label>
-                            <div class="col-md-2">
-                                <input type="number" class="form-control" id="inputofertquant">
-                            </div>
+                        <label for="inputofertquant" class="col-md-2 control-label">Quantidade</label>
+                        <div class="col-md-2">
+                            <input type="number" class="form-control" id="inputofertquant">
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            <label for="selectbrinde" class="col-md-2 control-label">Brinde</label>
-                            <div class="col-md-2">
-                                <select class="form-control" id="selectbrinde">
-                                    <option value="NÃO">NÃO</option>
-                                    <option value="SIM">SIM</option>
-                                </select>
-                            </div>
-                            <label for="inputbrindequant" class="col-md-2 control-label">Quantidade</label>
-                            <div class="col-md-2">
-                                <input type="number" class="form-control" id="inputbrindequant">
-                            </div>
+                    <div class="form-group">
+                        <label for="selectbrinde" class="col-md-1 control-label">Brinde</label>
+                        <div class="col-md-2">
+                            <select class="form-control" id="selectbrinde">
+                                <option value="NÃO">NÃO</option>
+                                <option value="SIM">SIM</option>
+                            </select>
                         </div>
+                        <label for="inputbrindequant" class="col-md-2 control-label">Quantidade</label>
+                        <div class="col-md-2">
+                            <input type="number" class="form-control" id="inputbrindequant">
+                        </div>
+                    </div>
 
-                    </fieldset>
-                </form>
-            </div>
+                    <br />
+                    <div class="col-md-1"></div>
+                    <p>
+                        <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="cancelar()">
+                            <i class="fa fa-undo" aria-hidden="true"></i>&nbsp;Cancelar</button>
 
-            <!-- Botões Controle -->
-            <div class="col-md-12 col-lg-12 w3-border w3-round w3-light-gray w3-padding" style="margin-top: 10px">
-                <br />
-                <div class="col-md-2"></div>
-                <p>
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="cancelar()">
-                        <i class="fa fa-undo" aria-hidden="true"></i>&nbsp;Sair</button>
+                        <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="AlterarRegistro()">
+                            <i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Salvar&nbsp;&nbsp;
+                        </button>
 
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="classeBt2()">
-                        <i class="fa fa-forward" aria-hidden="true"></i>&nbsp;Avançar</button>
+                        <i style="display: none" class="aguarde fa-2x fa fa-cog fa-spin fa-fw w3-text-blue w3-right"></i>
+                    </p>
 
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="AlterarRegistro()">
-                        <i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Salvar&nbsp;&nbsp;
-                    </button>
-
-                    <i style="display: none" class="aguarde fa-2x fa fa-cog fa-spin fa-fw w3-text-blue w3-right"></i>
-                </p>
-            </div>
-            <!-- Botões Controle -->
-
+                </fieldset>
+            </form>
 
         </div>
 
+    </div>
 
-        <!-- GRUPO 2 -->
-        <div id="grupo2" class="w3-container grupo w3-animate-left" style="display: none">
+    <br />
+
+    <!-- GRUPO 2 -->
+    <div id="grupo2" class="w3-container" style="display: block">
+
+        <!-- Imagens -->
+        <div class="col-md-12 col-lg-12 w3-border w3-light-gray" style="margin-top: 20px">
+
+
+            <h3><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Imagens</h3>
             <br />
-            <div class="col-md-12 col-lg-12 w3-border w3-round w3-light-gray">
-                <h3><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Imagens</h3>
-            </div>
 
-            <div class="col-md-12 col-lg-12 w3-border w3-light-gray" style="margin-top: 20px">
-
-                <!-- PRodutos-->
-                <div id="Bloco2" class="w3-col s12 m6 l4 w3-padding">
-
-                    <div class="panel panel-success">
-
-                        <div class="panel-heading text-center">
-                            <h4 class="panel-title w3-small">Foto 1</h4>
-                        </div>
-
-                        <div class="panel-body">
-                            <div class="w3-center" style="width: 100%; height: 140px; margin: 0 auto">
-
-                                <div id="results"></div>
-                                <div class="row">
-                                    <label for="filePicker">Foto ( 200x300pixels - Tam.Máx.:75Kb )</label><br>
-                                    <input type="file" id="filePicker">
-                                </div>
-                                <input id="Hidden1" name="fotouri" type="hidden" />
+            <!-- Foto 1 -->
+            <div id="BlocoFoto1" class="w3-col s12 m6 l4 w3-padding">
+                <div class="panel panel-success">
+                    <div class="panel-heading text-center">
+                        <h4 class="panel-title w3-small">Foto 1</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="w3-center" style="width: 100%; height: 140px; margin: 0 auto">
+                            <div id="results1"></div>
+                            <div class="row">
+                                <input type="file" id="Imagem1">
                             </div>
+                            <input id="ImagemHidden1" type="hidden" />
                         </div>
-
                     </div>
                 </div>
-
-
-
             </div>
 
-            <!-- Botões Controle -->
-            <div class="col-md-12 col-lg-12 w3-border w3-round w3-light-gray w3-padding" style="margin-top: 10px">
-                <br />
-                <div class="col-md-2"></div>
-                <p>
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="cancelar()">
-                        <i class="fa fa-undo" aria-hidden="true"></i>&nbsp;Sair</button>
-
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="btvoltar1()">
-                        <i class="fa fa-backward" aria-hidden="true"></i>&nbsp;Voltar</button>
-
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="classeBt3()">
-                        <i class="fa fa-forward" aria-hidden="true"></i>&nbsp;Avançar</button>
-
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="AlterarRegistro()">
-                        <i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Salvar&nbsp;
-                    </button>
-
-                    <i style="display: none" class="aguarde fa-2x fa fa-cog fa-spin fa-fw w3-text-blue w3-right"></i>
-                </p>
+            <!-- Foto 2 -->
+            <div id="BlocoFoto2" class="w3-col s12 m6 l4 w3-padding">
+                <div class="panel panel-success">
+                    <div class="panel-heading text-center">
+                        <h4 class="panel-title w3-small">Foto 2</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="w3-center" style="width: 100%; height: 140px; margin: 0 auto">
+                            <div id="results2"></div>
+                            <div class="row">
+                                <input type="file" id="Imagem2">
+                            </div>
+                            <input id="ImagemHidden2" type="hidden" />
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- Botões Controle -->
 
+            <!-- Foto 3 -->
+            <div id="BlocoFoto3" class="w3-col s12 m6 l4 w3-padding">
+                <div class="panel panel-success">
+                    <div class="panel-heading text-center">
+                        <h4 class="panel-title w3-small">Foto 3</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="w3-center" style="width: 100%; height: 140px; margin: 0 auto">
+                            <div id="results3"></div>
+                            <div class="row">
+                                <input type="file" id="Imagem3">
+                            </div>
+                            <input id="ImagemHidden3" type="hidden" />
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
-
-
-        <!-- GRUPO 3 -->
-        <div id="grupo3" class="w3-container grupo w3-animate-left" style="display: none">
-            <br />
-            <div class="col-md-12 col-lg-12 w3-border w3-round w3-light-gray">
-                <h3><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Estoque</h3>
-            </div>
-
-            <div class="col-md-12 col-lg-12 w3-border w3-light-gray" style="margin-top: 20px">
-                <p>&nbsp;</p>
-            </div>
-
-            <!-- Botões Controle -->
-            <div class="col-md-12 col-lg-12 w3-border w3-round w3-light-gray w3-padding" style="margin-top: 10px">
-                <br />
-                <div class="col-md-2"></div>
-                <p>
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="cancelar()">
-                        <i class="fa fa-undo" aria-hidden="true"></i>&nbsp;Sair</button>
-
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="btvoltar2()">
-                        <i class="fa fa-backward" aria-hidden="true"></i>&nbsp;Voltar</button>
-
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="classeBt4()">
-                        <i class="fa fa-forward" aria-hidden="true"></i>&nbsp;Avançar</button>
-
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="AlterarRegistro()">
-                        <i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Salvar&nbsp;
-                    </button>
-
-                    <i style="display: none" class="aguarde fa-2x fa fa-cog fa-spin fa-fw w3-text-blue w3-right"></i>
-                </p>
-            </div>
-            <!-- Botões Controle -->
-        </div>
-
-
-        <!-- GRUPO 4 -->
-        <div id="grupo4" class="w3-container grupo w3-animate-left" style="display: none">
-            <br />
-            <div class="col-md-12 col-lg-12 w3-border w3-round w3-light-gray">
-                <h3><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Vendas</h3>
-            </div>
-
-            <div class="col-md-12 col-lg-12 w3-border w3-light-gray" style="margin-top: 20px">
-                <p>&nbsp;</p>
-            </div>
-
-            <!-- Botões Controle -->
-            <div class="col-md-12 col-lg-12 w3-border w3-round w3-light-gray w3-padding" style="margin-top: 10px">
-                <br />
-                <div class="col-md-2"></div>
-                <p>
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="cancelar()">
-                        <i class="fa fa-undo" aria-hidden="true"></i>&nbsp;Sair</button>
-
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="btvoltar3()">
-                        <i class="fa fa-backward" aria-hidden="true"></i>&nbsp;Voltar</button>
-
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="AlterarRegistro()">
-                        <i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Salvar&nbsp;
-                    </button>
-
-                    <i style="display: none" class="aguarde fa-2x fa fa-cog fa-spin fa-fw w3-text-blue w3-right"></i>
-                </p>
-            </div>
-            <!-- Botões Controle -->
-        </div>
-
-
 
     </div>
+
+    <!-- GRUPO 3 -->
+    <div id="grupo3" class="w3-container grupo" style="display: block">
+        <div class="col-md-12 col-lg-12 w3-border w3-light-gray" style="margin-top: 20px">
+            <h3><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Estoque</h3>
+        </div>
+    </div>
+
+
+    <!-- GRUPO 4 -->
+    <div id="grupo4" class="w3-container grupo" style="display: block">
+
+        <div class="col-md-12 col-lg-12 w3-border w3-light-gray" style="margin-top: 20px">
+            <h3><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Vendas</h3>
+        </div>
+
+    </div>
+
 
     <!-- auxiliares -->
     <input id="IDAuxHidden" type="hidden" />

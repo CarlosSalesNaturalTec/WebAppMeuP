@@ -98,92 +98,86 @@ function UIAguardar() {
     }
 }
 
+function mostrabloco1() {
+    document.getElementById('grupo1').style.display = "block";
+    document.getElementById('grupo2').style.display = "none";
+    document.getElementById('grupo3').style.display = "none";
+    document.getElementById('grupo4').style.display = "none";
+}
 
-//Menu
-function openLink(evt, animName) {
-    var i, x, tablinks;
-    x = document.getElementsByClassName("grupo");
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+function mostrabloco2() {
+    document.getElementById('grupo1').style.display = "none";
+    document.getElementById('grupo2').style.display = "block";
+    document.getElementById('grupo3').style.display = "none";
+    document.getElementById('grupo4').style.display = "none";
+}
+
+function mostrabloco3() {
+    document.getElementById('grupo1').style.display = "none";
+    document.getElementById('grupo2').style.display = "none";
+    document.getElementById('grupo3').style.display = "block";
+    document.getElementById('grupo4').style.display = "none";
+}
+
+function mostrabloco4() {
+    document.getElementById('grupo1').style.display = "none";
+    document.getElementById('grupo2').style.display = "none";
+    document.getElementById('grupo3').style.display = "none";
+    document.getElementById('grupo4').style.display = "block";
+}
+
+//leitura de imagem-foto
+if (window.File && window.FileReader && window.FileList && window.Blob) {
+    document.getElementById('Imagem1').addEventListener('change', ConvertImagem1, false);
+    document.getElementById('Imagem2').addEventListener('change', ConvertImagem2, false);
+    document.getElementById('Imagem3').addEventListener('change', ConvertImagem3, false);
+} else {
+    alert('Atualizar Navegador');
+}
+
+var ConvertImagem1 = function (evt) {
+    var files = evt.target.files;
+    var file = files[0];
+    if (files && file) {
+        var reader = new FileReader();
+        reader.onload = function (readerEvt) {
+            var binaryString = readerEvt.target.result;
+            var data_uri = "data:image/png;base64," + btoa(binaryString);
+            document.getElementById('results1').innerHTML = '<img src="' + data_uri + '"/>';
+            document.getElementById("ImagemHidden1").value = data_uri;
+        };
+        reader.readAsBinaryString(file);
     }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < x.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" w3-blue", "");
+};
+
+var ConvertImagem2 = function (evt) {
+    var files = evt.target.files;
+    var file = files[0];
+    if (files && file) {
+        var reader = new FileReader();
+        reader.onload = function (readerEvt) {
+            var binaryString = readerEvt.target.result;
+            var data_uri = "data:image/png;base64," + btoa(binaryString);
+            document.getElementById('results2').innerHTML = '<img src="' + data_uri + '"/>';
+            document.getElementById("ImagemHidden2").value = data_uri;
+        };
+        reader.readAsBinaryString(file);
     }
-    document.getElementById(animName).style.display = "block";
-    evt.currentTarget.className += " w3-blue";
-}
+};
 
-function classeBt2() {
-    openLink(event, 'grupo2')
-    $('#bt2').addClass(' w3-blue');
-}
-function classeBt3() {
-    openLink(event, 'grupo3')
-    $('#bt3').addClass(' w3-blue');
-}
-function classeBt4() {
-    openLink(event, 'grupo4')
-    $('#bt4').addClass(' w3-blue');
-}
-function classeBt5() {
-    openLink(event, 'grupo5')
-    $('#bt5').addClass(' w3-blue');
-}
-function classeBt6() {
-    openLink(event, 'grupo6')
-    $('#bt6').addClass(' w3-blue');
-}
-function classeBt7() {
-    openLink(event, 'grupo7')
-    $('#bt7').addClass(' w3-blue');
-}
-function classeBt8() {
-    openLink(event, 'grupo8')
-    $('#bt8').addClass(' w3-blue');
-}
-function classeBt9() {
-    openLink(event, 'grupo9')
-    $('#bt9').addClass(' w3-blue');
-}
-function classeBt10() {
-    openLink(event, 'grupo10')
-    $('#bt10').addClass(' w3-blue');
-}
+var ConvertImagem3 = function (evt) {
+    var files = evt.target.files;
+    var file = files[0];
+    if (files && file) {
+        var reader = new FileReader();
+        reader.onload = function (readerEvt) {
+            var binaryString = readerEvt.target.result;
+            var data_uri = "data:image/png;base64," + btoa(binaryString);
+            document.getElementById('results3').innerHTML = '<img src="' + data_uri + '"/>';
+            document.getElementById("ImagemHidden3").value = data_uri;
+        };
+        reader.readAsBinaryString(file);
+    }
+};
 
-function btvoltar1() {
-    openLink(event, 'grupo1')
-    $('#bt1').addClass(' w3-blue');
-}
-function btvoltar2() {
-    openLink(event, 'grupo2')
-    $('#bt2').addClass(' w3-blue');
-}
-function btvoltar3() {
-    openLink(event, 'grupo3')
-    $('#bt3').addClass(' w3-blue');
-}
-function btvoltar4() {
-    openLink(event, 'grupo4')
-    $('#bt4').addClass(' w3-blue');
-}
-function btvoltar5() {
-    openLink(event, 'grupo5')
-    $('#bt5').addClass(' w3-blue');
-}
-function btvoltar6() {
-    openLink(event, 'grupo6')
-    $('#bt6').addClass(' w3-blue');
-}
-function btvoltar7() {
-    openLink(event, 'grupo7')
-    $('#bt7').addClass(' w3-blue');
-}
-function btvoltar8() {
-    openLink(event, 'grupo8')
-    $('#bt8').addClass(' w3-blue');
-}
-function btvoltar9() {
-    openLink(event, 'grupo9')
-    $('#bt9').addClass(' w3-blue');
-}
+

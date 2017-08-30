@@ -44,9 +44,9 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="CAD_Produtos_Listagem.aspx" target="iframe">Produtos</a></li>
-                    <li><a href="#">Financeiro</a></li>
-                    <li><a href="#">Redes Sociais</a></li>
+                    <li><a href="CAD_Produtos_Listagem.aspx" target="iframe">Produtos&nbsp;<i class="fa fa-barcode" aria-hidden="true"></i></a></li>
+                    <li><a href="#">Financeiro&nbsp;<i class="fa fa-dollar" aria-hidden="true"></i></a></li>
+                    <li><a href="#">Redes Sociais&nbsp;<i class="fa fa-wifi" aria-hidden="true"></i></a></li>
                     <li><a href="#" onclick="sair()">Sair&nbsp;<span class="glyphicon glyphicon-off"></span></a></li>
                 </ul>
             </div>

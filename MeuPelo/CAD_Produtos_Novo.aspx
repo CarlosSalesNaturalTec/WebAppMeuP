@@ -16,20 +16,11 @@
 
 </head>
 <body>
-    <!--*******MENU LATERAL - Customização*******-->
-    <div class="w3-sidebar w3-bar-block w3-light-blue w3-card-2" style="width: 180px">
-        <hr />
-        <button id="bt1" class="w3-bar-item w3-button tablink w3-hover-blue" onclick="openLink(event, 'grupo1')"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Descrição</button>
-        <button id="bt2" class="w3-bar-item w3-button tablink w3-hover-blue" onclick="openLink(event, 'grupo2')"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Imagens</button>
-        <button id="bt3" class="w3-bar-item w3-button tablink w3-hover-blue" onclick="openLink(event, 'grupo3')"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Estoque</button>
-        <button id="bt4" class="w3-bar-item w3-button tablink w3-hover-blue" onclick="openLink(event, 'grupo4')"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Vendas</button>
-        <hr />
-    </div>
 
-    <div style="margin-left: 180px">
+    <div>
 
         <!-- GRUPO 1 -->
-        <div id="grupo1" class="w3-container grupo w3-animate-left" style="display: block">
+        <div id="grupo1" class="w3-container grupo w3-animate-top" style="display: block">
             <br />
             <div class="col-md-12 col-lg-12 w3-border w3-round w3-light-gray">
                 <h3><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Descrição</h3>
@@ -42,21 +33,18 @@
                     <fieldset>
                         <br />
                         <div class="form-group">
-                            <label for="input1" class="col-md-2 control-label">Nome</label>
-                            <div class="col-md-9">
+                            <label for="input1" class="col-md-1 control-label">Nome</label>
+                            <div class="col-md-5">
                                 <input type="text" class="form-control" id="input1">
                             </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="input2" class="col-md-2 control-label">Categoria</label>
-                            <div class="col-md-9">
+                            <label for="input2" class="col-md-1 control-label">Categoria</label>
+                            <div class="col-md-5">
                                 <input type="text" class="form-control" id="input2">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="inputund" class="col-md-2 control-label">Unidade</label>
+                            <label for="inputund" class="col-md-1 control-label">Unidade</label>
                             <div class="col-md-2">
                                 <input type="text" class="form-control" id="inputund" value="UND">
                             </div>
@@ -73,7 +61,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="selectofertar" class="col-md-2 control-label">Ofertar</label>
+                            <label for="selectofertar" class="col-md-1 control-label">Ofertar</label>
                             <div class="col-md-2">
                                 <select class="form-control" id="selectofertar">
                                     <option value="NÃO">NÃO</option>
@@ -88,7 +76,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="selectbrinde" class="col-md-2 control-label">Brinde</label>
+                            <label for="selectbrinde" class="col-md-1 control-label">Brinde</label>
                             <div class="col-md-2">
                                 <select class="form-control" id="selectbrinde">
                                     <option value="NÃO">NÃO</option>
@@ -108,13 +96,10 @@
             <!-- Botões Controle -->
             <div class="col-md-12 col-lg-12 w3-border w3-round w3-light-gray w3-padding" style="margin-top: 10px">
                 <br />
-                <div class="col-md-2"></div>
+                <div class="col-md-1"></div>
                 <p>
                     <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="cancelar()">
-                        <i class="fa fa-undo" aria-hidden="true"></i>&nbsp;Sair</button>
-
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="classeBt2()">
-                        <i class="fa fa-forward" aria-hidden="true"></i>&nbsp;Avançar</button>
+                        <i class="fa fa-undo" aria-hidden="true"></i>&nbsp;Cancelar</button>
 
                     <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="SalvarRegistro()">
                         <i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Salvar&nbsp;&nbsp;
@@ -127,115 +112,6 @@
 
 
         </div>
-
-
-        <!-- GRUPO 2 -->
-        <div id="grupo2" class="w3-container grupo w3-animate-left" style="display: none">
-            <br />
-            <div class="col-md-12 col-lg-12 w3-border w3-round w3-light-gray">
-                <h3><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Imagens</h3>
-            </div>
-
-            <div class="col-md-12 col-lg-12 w3-border w3-light-gray" style="margin-top: 20px">
-                <p>&nbsp;</p>
-            </div>
-
-            <!-- Botões Controle -->
-            <div class="col-md-12 col-lg-12 w3-border w3-round w3-light-gray w3-padding" style="margin-top: 10px">
-                <br />
-                <div class="col-md-2"></div>
-                <p>
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="cancelar()">
-                        <i class="fa fa-undo" aria-hidden="true"></i>&nbsp;Sair</button>
-
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="btvoltar1()">
-                        <i class="fa fa-backward" aria-hidden="true"></i>&nbsp;Voltar</button>
-
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="classeBt3()">
-                        <i class="fa fa-forward" aria-hidden="true"></i>&nbsp;Avançar</button>
-
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="SalvarRegistro()">
-                        <i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Salvar&nbsp;
-                    </button>
-
-                    <i style="display: none" class="aguarde fa-2x fa fa-cog fa-spin fa-fw w3-text-blue w3-right"></i>
-                </p>
-            </div>
-            <!-- Botões Controle -->
-
-
-        </div>
-
-
-        <!-- GRUPO 3 -->
-        <div id="grupo3" class="w3-container grupo w3-animate-left" style="display: none">
-            <br />
-            <div class="col-md-12 col-lg-12 w3-border w3-round w3-light-gray">
-                <h3><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Estoque</h3>
-            </div>
-
-             <div class="col-md-12 col-lg-12 w3-border w3-light-gray" style="margin-top: 20px">
-                <p>&nbsp;</p>
-            </div>
-
-            <!-- Botões Controle -->
-            <div class="col-md-12 col-lg-12 w3-border w3-round w3-light-gray w3-padding" style="margin-top: 10px">
-                <br />
-                <div class="col-md-2"></div>
-                <p>
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="cancelar()">
-                        <i class="fa fa-undo" aria-hidden="true"></i>&nbsp;Sair</button>
-
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="btvoltar2()">
-                        <i class="fa fa-backward" aria-hidden="true"></i>&nbsp;Voltar</button>
-
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="classeBt4()">
-                        <i class="fa fa-forward" aria-hidden="true"></i>&nbsp;Avançar</button>
-
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="SalvarRegistro()">
-                        <i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Salvar&nbsp;
-                    </button>
-
-                    <i style="display: none" class="aguarde fa-2x fa fa-cog fa-spin fa-fw w3-text-blue w3-right"></i>
-                </p>
-            </div>
-            <!-- Botões Controle -->
-        </div>
-
-
-        <!-- GRUPO 4 -->
-        <div id="grupo4" class="w3-container grupo w3-animate-left" style="display: none">
-            <br />
-            <div class="col-md-12 col-lg-12 w3-border w3-round w3-light-gray">
-                <h3><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Vendas</h3>
-            </div>
-
-             <div class="col-md-12 col-lg-12 w3-border w3-light-gray" style="margin-top: 20px">
-                <p>&nbsp;</p>
-            </div>
-
-            <!-- Botões Controle -->
-            <div class="col-md-12 col-lg-12 w3-border w3-round w3-light-gray w3-padding" style="margin-top: 10px">
-                <br />
-                <div class="col-md-2"></div>
-                <p>
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="cancelar()">
-                        <i class="fa fa-undo" aria-hidden="true"></i>&nbsp;Sair</button>
-
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="btvoltar3()">
-                        <i class="fa fa-backward" aria-hidden="true"></i>&nbsp;Voltar</button>
-
-                    <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="SalvarRegistro()">
-                        <i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Salvar&nbsp;
-                    </button>
-
-                    <i style="display: none" class="aguarde fa-2x fa fa-cog fa-spin fa-fw w3-text-blue w3-right"></i>
-                </p>
-            </div>
-            <!-- Botões Controle -->
-        </div>
-
-
 
     </div>
 
