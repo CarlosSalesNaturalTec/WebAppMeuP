@@ -130,7 +130,6 @@ function mostrabloco4() {
 if (window.File && window.FileReader && window.FileList && window.Blob) {
     document.getElementById('Imagem1').addEventListener('change', ConvertImagem1, false);
     document.getElementById('Imagem2').addEventListener('change', ConvertImagem2, false);
-    document.getElementById('Imagem3').addEventListener('change', ConvertImagem3, false);
 } else {
     alert('Atualizar Navegador');
 }

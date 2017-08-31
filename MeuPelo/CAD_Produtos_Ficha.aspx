@@ -2,17 +2,27 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<html>
+<head>
 
     <!--*******Customização*******-->
     <title>Ficha de Produto</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+        #results1 {
+            float: right;
+            margin: 5px;
+            padding: 5px;
+            border: 1px solid;
+            background: #ccc;
+        }
+    </style>
 
 </head>
 <body>
@@ -113,7 +123,6 @@
         <!-- Imagens -->
         <div class="col-md-12 col-lg-12 w3-border w3-light-gray" style="margin-top: 20px">
 
-
             <h3><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Imagens</h3>
             <br />
 
@@ -121,7 +130,8 @@
             <div id="BlocoFoto1" class="w3-col s12 m6 l4 w3-padding">
                 <div class="panel panel-success">
                     <div class="panel-heading text-center">
-                        <h4 class="panel-title w3-small">Foto 1</h4>
+                        <h4 class="panel-title w3-small">Foto Tamanho Pequeno</h4>
+                        <p>Dimensões: 400x300px  Tamanho Máx.::15KB</p>
                     </div>
                     <div class="panel-body">
                         <div class="w3-center" style="width: 100%; height: 140px; margin: 0 auto">
@@ -129,7 +139,7 @@
                             <div class="row">
                                 <input type="file" id="Imagem1">
                             </div>
-                            <input id="ImagemHidden1" type="hidden" />
+                            <input id="ImagemHidden1" type="text" />
                         </div>
                     </div>
                 </div>
@@ -147,29 +157,12 @@
                             <div class="row">
                                 <input type="file" id="Imagem2">
                             </div>
-                            <input id="ImagemHidden2" type="hidden" />
+                            <input id="ImagemHidden2" type="text" />
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Foto 3 -->
-            <div id="BlocoFoto3" class="w3-col s12 m6 l4 w3-padding">
-                <div class="panel panel-success">
-                    <div class="panel-heading text-center">
-                        <h4 class="panel-title w3-small">Foto 3</h4>
-                    </div>
-                    <div class="panel-body">
-                        <div class="w3-center" style="width: 100%; height: 140px; margin: 0 auto">
-                            <div id="results3"></div>
-                            <div class="row">
-                                <input type="file" id="Imagem3">
-                            </div>
-                            <input id="ImagemHidden3" type="hidden" />
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </div>
 
@@ -199,6 +192,7 @@
 
     <!-- Scripts Diversos  -->
     <script type="text/javascript" src="scripts/codeProdutos_Novo.js"></script>
+    <script type="text/javascript" src="scripts/webcam.js"></script>
 
 </body>
 </html>
