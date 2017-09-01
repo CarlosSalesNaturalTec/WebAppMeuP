@@ -31,3 +31,8 @@ function Excluir(IDExc) {
 function Excluir_cancel() {
     document.getElementById('DivModal').style.display = 'none';
 }
+
+function Imagens(IDAux,ProdutoAux) {
+    var urlLink = "CAD_Lojistas_Produtos_Imagens.aspx?p1=" + IDAux + "&p2=" + ProdutoAux;
+    window.location.href = urlLink;
+}

@@ -68,13 +68,12 @@ public partial class CAD_Produtos_Listagem : System.Web.UI.Page
             valor = Convert.ToDecimal(dados[6]);
             string Coluna6a = "R$ " + valor.ToString("N", CultureInfo.CreateSpecificCulture("pt-BR"));
 
-            // <!--*******Customização*******-->
-            string bt1 = "<a class='w3-btn w3-round w3-hover-blue w3-text-blue' href='CAD_Produtos_Ficha.aspx?v1=" + Coluna0 + "'><i class='fa fa-id-card-o' aria-hidden='true'></i></a>";
+            string bt1 = "<a class='w3-btn w3-round w3-hover-blue w3-text-blue' href='CAD_Produtos_Ficha.aspx?v1=" + Coluna0 + "'><i class='fa fa-pencil-square-o' aria-hidden='true'></i></a>";
             string bt2 = "<a class='w3-btn w3-round w3-hover-red w3-text-blue' onclick='Excluir(" + Coluna0 + ")'><i class='fa fa-trash-o' aria-hidden='true'></i></a>&nbsp;&nbsp;";
-
-            // <!--*******Customização*******-->
+            string bt3 = "<a class='w3-btn w3-round w3-hover-blue w3-text-blue' onclick='Imagens(" + Coluna0 + ", \"" + Coluna1 +  "\")'><i class='fa fa-file-image-o' aria-hidden='true'></i></a>&nbsp;&nbsp;";
+           
             string stringcomaspas = "<tr>" +
-                "<td>" + bt1 + bt2 + "</td>" +
+                "<td>" + bt1 + bt3 + bt2 + "</td>" +
                 "<td>" + Coluna1 + "</td>" +
                 "<td>" + Coluna2 + "</td>" +
                 "<td>" + Coluna3 + "</td>" +

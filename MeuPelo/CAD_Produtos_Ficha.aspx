@@ -14,22 +14,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <style>
-        #results {
-            float: right;
-            margin: 5px;
-            padding: 5px;
-            border: 1px solid;
-            background: #ccc;
-        }
-    </style>
-
 </head>
 <body>
 
-    <!-- GRUPO 1 -->
+    <!--*******DEscrição do Produto*******-->
     <div id="grupo1" class="w3-container" style="display: block">
-        <!--*******DEscrição do Produto*******-->
+
         <div class="col-md-12 col-lg-12 w3-border w3-light-gray" style="margin-top: 20px">
 
             <h3><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Descrição</h3>
@@ -98,10 +88,10 @@
                     <br />
                     <div class="col-md-1"></div>
                     <p>
-                        <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="cancelar()">
+                        <button type="button" class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="cancelar()">
                             <i class="fa fa-undo" aria-hidden="true"></i>&nbsp;Cancelar</button>
 
-                        <button class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="AlterarRegistro()">
+                        <button type="button" class="w3-btn w3-round w3-border w3-light-blue w3-hover-blue btcontroles" onclick="AlterarRegistro()">
                             <i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;Salvar&nbsp;&nbsp;
                         </button>
 
@@ -114,8 +104,6 @@
         </div>
 
     </div>
-
-    <br />
 
     <!-- auxiliares -->
     <input id="IDAuxHidden" type="hidden" />

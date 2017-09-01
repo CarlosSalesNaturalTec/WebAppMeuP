@@ -211,6 +211,31 @@ public class WebService : System.Web.Services.WebService
         return url;
     }
 
+
+    [WebMethod]
+    public string ProdutoGravarImagem(string param0, string param1, string param2)
+    {
+        string msgRetorno = "XX";
+
+        // param0 = nome do campo   param1 = id do produto       param2 = iamgem URI
+
+        OperacaoBanco operacao4 = new OperacaoBanco();
+        bool alterar = operacao4.Update("update Tbl_Produtos set " +
+            param0 + " = '" + param2 + "' " +
+            "where ID_Produto =" + param1);
+
+        ConexaoBancoSQL.fecharConexao();
+
+        if (alterar == true)
+        {
+            msgRetorno = "OK";
+        }
+       
+        return msgRetorno;
+
+    }
+
+
 }
 
 
