@@ -19,7 +19,7 @@ public partial class CAD_Lojistas_Produtos_Imagens : System.Web.UI.Page
     {
             
         string stringSelect = "select " +
-            "foto1, foto2 " +
+            "Imagem1, Imagem2 " +
             "from Tbl_Produtos " +
             "where ID_Produto = " + IDAux;
 

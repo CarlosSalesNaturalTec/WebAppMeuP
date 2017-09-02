@@ -12,8 +12,13 @@
     <!-- W3 CSS -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+    <!-- Jquery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -29,7 +34,7 @@
         }
 
         @media (max-width: 576px) {
-            nav>.container {
+            nav > .container {
                 width: 100%;
             }
         }
@@ -64,7 +69,7 @@
                     alert('Conectado');
                 } else {
                     alert('NÃO Conectado');
-                    // The person is not logged into this app or we are unable to tell. 
+                    // The person is not logged into this app or we are unable to tell.
                 }
             });
         }
@@ -74,7 +79,7 @@
     <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse" id="mainNav">
         <div class="container">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand" href="#page-top">Meu Pelô</a>
@@ -159,6 +164,8 @@
                 </div>
             </div>
             <div class="row">
+
+                <!-- Oferta 1 -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <div class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
                         <div class="portfolio-hover">
@@ -166,13 +173,15 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
+                        <div id="Bloco1Imagem"><img class="img-fluid" src="img/portfolio/blank.png" alt=""></div>
                     </div>
                     <div class="portfolio-caption">
-                        <h4>Pacote 1</h4>
-                        <p class="text-muted">Produto + Serviço + Estacionamento </p>
+                        <h6 id="pacote1_Titulo">Surpresa 1</h6>
+                        <p id="pacote1_SubT" class="text-muted">Carregando...</p>
                     </div>
                 </div>
+
+                <!-- Oferta 2 -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <div class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
                         <div class="portfolio-hover">
@@ -180,13 +189,15 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
+                        <div id="Bloco2Imagem"><img class="img-fluid" src="img/portfolio/blank.png" alt=""></div>
                     </div>
                     <div class="portfolio-caption">
-                        <h4>Pacote 2</h4>
-                        <p class="text-muted">Produto + Serviço + Hospedagem </p>
+                        <h4 id="pacote2_Titulo">Surpresa 2</h4>
+                        <p id="pacote2_SubT" class="text-muted">Carregando...</p>
                     </div>
                 </div>
+
+                <!-- Oferta 3 -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <div class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
                         <div class="portfolio-hover">
@@ -194,13 +205,15 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
+                        <div id="Bloco3Imagem"><img class="img-fluid" src="img/portfolio/blank.png" alt=""></div>
                     </div>
                     <div class="portfolio-caption">
-                        <h4>Pacote 3</h4>
-                        <p class="text-muted">Produto + Produto + Estacionamento </p>
+                        <h4 id="pacote3_Titulo">Surpresa 3</h4>
+                        <p id="pacote3_SubT" class="text-muted">Carregando...</p>
                     </div>
                 </div>
+
+                <!-- Oferta 4 -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <div class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
                         <div class="portfolio-hover">
@@ -208,13 +221,15 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
+                        <div id="Bloco4Imagem"><img class="img-fluid" src="img/portfolio/blank.png" alt=""></div>
                     </div>
                     <div class="portfolio-caption">
-                        <h4>Pacote 4</h4>
-                        <p class="text-muted">Produto + Serviço + Estacionamento </p>
+                        <h4 id="pacote4_Titulo">Surpresa 4</h4>
+                        <p id="pacote4_SubT" class="text-muted">Carregando...</p>
                     </div>
                 </div>
+
+                <!-- Oferta 5 -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <div class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
                         <div class="portfolio-hover">
@@ -222,13 +237,15 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
+                        <div id="Bloco5Imagem"><img class="img-fluid" src="img/portfolio/blank.png" alt=""></div>
                     </div>
                     <div class="portfolio-caption">
-                        <h4>Pacote 5</h4>
-                        <p class="text-muted">Produto + Serviço + Hospedagem </p>
+                        <h4 id="pacote5_Titulo">Surpresa 5</h4>
+                        <p id="pacote5_SubT" class="text-muted">Carregando...</p>
                     </div>
                 </div>
+
+                <!-- Oferta 6 -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <div class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
                         <div class="portfolio-hover">
@@ -236,13 +253,14 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
+                        <div id="Bloco6Imagem"><img class="img-fluid" src="img/portfolio/blank.png" alt=""></div>
                     </div>
                     <div class="portfolio-caption">
-                        <h4>Pacote 6</h4>
-                        <p class="text-muted">Produto + Serviço</p>
+                        <h4 id="pacote6_Titulo">Surpresa 6</h4>
+                        <p id="pacote6_SubT" class="text-muted">Carregando...</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -251,9 +269,10 @@
     <section id="Mapa">
         <div class="row" style="margin-left:2%; margin-right:2%">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0078221630256!2d-38.51050428517789!3d-12.971351090856007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71604e7b5425c01%3A0x9083c43b0877ba22!2sPelourinho!5e0!3m2!1spt-BR!2sbr!4v1502244943115"
-                width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
     </section>
+
 
     <!-- SObre nós TIME-LINE -->
     <section id="about">
@@ -291,8 +310,10 @@
                                     <h4 class="subheading">Hackathon+ Salvador</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Acontece a primeira edição do Hackathon+ Salvador. DE onde se iniciaram vários projetos
-                                        sobre a revitalização do Centro Histórico de Salvador - CHS</p>
+                                    <p class="text-muted">
+                                        Acontece a primeira edição do Hackathon+ Salvador. DE onde se iniciaram vários projetos
+                                        sobre a revitalização do Centro Histórico de Salvador - CHS
+                                    </p>
                                 </div>
                             </div>
                         </li>
@@ -306,8 +327,10 @@
                                     <h4 class="subheading">Inauguração do Portal</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Após levantamento de atores locais e de todo o seu portfólio de produtos e serviços,
-                                        iniciamos as vendas.</p>
+                                    <p class="text-muted">
+                                        Após levantamento de atores locais e de todo o seu portfólio de produtos e serviços,
+                                        iniciamos as vendas.
+                                    </p>
                                 </div>
                             </div>
                         </li>
@@ -326,6 +349,7 @@
         </div>
     </section>
 
+
     <!-- Apoio -->
     <section id="apoio">
 
@@ -338,25 +362,26 @@
 
         <div class="w3-row w3-container">
             <div class="row">
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6 w3-center w3-padding">
                     <img src="img/parceiros/logo_iacm.png" class="w3-grayscale-max" alt="">
                 </div>
 
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6 w3-center w3-padding">
                     <img src="img/parceiros/logo_vale_dende.png" class="w3-grayscale-max" alt="">
                 </div>
 
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6 w3-center w3-padding">
                     <img src="img/parceiros/logo_redemais.png" class="w3-grayscale-max" alt="">
                 </div>
 
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6 w3-center w3-padding">
                     <img src="img/parceiros/logo_prefeitura.png" class="w3-grayscale-max" alt="">
                 </div>
             </div>
             <br>
         </div>
     </section>
+
 
     <!-- equipe  -->
     <section class="bg-faded" id="team">
@@ -467,6 +492,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer>
@@ -728,7 +754,7 @@
             <form class="w3-container">
                 <div class="w3-section">
                     <input id="input_User" class="w3-input w3-border w3-round w3-margin-bottom" type="text" placeholder="email" name="usrname"
-                        required>
+                           required>
                     <input id="input_pwd" class="w3-input w3-border w3-round" type="password" placeholder="senha" name="psw" required>
 
                     <a id="btentrar" class="w3-btn w3-block w3-round w3-blue w3-hover-light-blue w3-section w3-padding" onclick="TentarLogin()">Entrar <i class="fa fa-sign-in" aria-hidden="true"></i></a>
@@ -796,7 +822,7 @@
 
                 <div class="w3-section">
                     <input id="btSignIn" type="button" class="w3-button w3-block w3-blue w3-hover-light-blue w3-section w3-padding" onclick="NovoUsuario();"
-                        value="Salvar" />
+                           value="Salvar" />
                 </div>
 
             </form>
@@ -820,9 +846,10 @@
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
 
-
     <!-- Scripts diversas -->
     <script type="text/javascript" src="scripts/codeLogin.js"></script>
+    <script type="text/javascript" src="scripts/codeProdutos_CarregaImagem.js"></script>
+
 </body>
 
 </html>

@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Web.Script.Serialization;
+using System.Web.Script.Services;
 using System.Web.Services;
 using System.Data.SqlClient;
 
@@ -16,8 +19,7 @@ public class WebService : System.Web.Services.WebService
     }
 
     [WebMethod]
-    public string usersave(string param1, string param2, string param3, string param4, string param5,
-         string param6, string param7)
+    public string usersave(string param1, string param2, string param3, string param4, string param5, string param6, string param7)
     {
 
         string url = "Sorry.html";
@@ -30,13 +32,13 @@ public class WebService : System.Web.Services.WebService
 
         if (inserir == true)
         {
-            string stringselect = "select ID_Lojista,nome,usuario " +
+            url = "blank.aspx";
+
+            string stringselect = "select ID_Lojista,nome " +
                 "from Tbl_Lojistas " +
                 "where usuario='" + param2 + "' and senha='" + param3 + "' ";
-
             OperacaoBanco operacao1 = new OperacaoBanco();
             SqlDataReader dados = operacao1.Select(stringselect);
-
             while (dados.Read())
             {
                 //cria parametros para validação de acesso
@@ -46,15 +48,13 @@ public class WebService : System.Web.Services.WebService
                 string vValida3a = vValida3.ToString();
 
                 // v1 = id do usuario    v2= nome      v3=validador
-
                 url = "Redirect.aspx?v1=" + Convert.ToString(dados[0]) + 
                     "&v2=" + Convert.ToString(dados[1]) +
                     "&v3=" + vValida3a;
             }
-
+            ConexaoBancoSQL.fecharConexao();
         }
 
-        ConexaoBancoSQL.fecharConexao();
         return url;
     }
 
@@ -92,8 +92,6 @@ public class WebService : System.Web.Services.WebService
         return Identificador_msg;
 
     }
-
-
 
     [WebMethod]
     public string salvarlink1(string param1, string param2, string param3, string param4)
@@ -143,13 +141,13 @@ public class WebService : System.Web.Services.WebService
 
     [WebMethod]
     public string ProdutoSalvar(string param0, string param1, string param2, string param3, string param4, string param5, 
-        string param6, string param7, string param8, string param9)
+        string param6, string param7, string param8, string param9, string param10)
     {
         string url;
         
         OperacaoBanco operacaoInst2 = new OperacaoBanco();
         Boolean inserirUser = operacaoInst2.Insert("INSERT INTO Tbl_Produtos (Nome , categoria  , unidade , preco_normal , preco_oferta , " +
-           "ofertar , ofertar_quant , brinde , brinde_quant, ID_Lojista ) " +
+           "ofertar , ofertar_quant , brinde , brinde_quant, descritivo , ID_Lojista ) " +
            "VALUES (" +
            "'" + param0 + "'," +
            "'" + param1 + "'," +
@@ -160,7 +158,8 @@ public class WebService : System.Web.Services.WebService
            param6 + "," +
            "'" + param7 + "'," +
            param8 + "," +
-           param9 + ")"
+           "'" + param9 + "'," +
+           param10 + ")"
            );
 
         ConexaoBancoSQL.fecharConexao();
@@ -177,10 +176,9 @@ public class WebService : System.Web.Services.WebService
         return url;
     }
 
-
     [WebMethod]
     public string ProdutoAlterar(string param0, string param1, string param2, string param3, string param4, string param5,
-        string param6, string param7, string param8, string param9)
+        string param6, string param7, string param8, string param9, string param10)
     {
         string url;
 
@@ -194,8 +192,9 @@ public class WebService : System.Web.Services.WebService
             "ofertar = '" + param5 + "'," +
             "ofertar_quant = " + param6 + " ," +
             "brinde = '" + param7 + "'," +
-            "brinde_quant = " + param8 + "  " +
-            "where ID_Produto =" + param9);  
+            "brinde_quant = " + param8 + ", " +
+            "descritivo  = '" + param9 + "' " +
+            "where ID_Produto =" + param10);  
 
         ConexaoBancoSQL.fecharConexao();
 
@@ -210,7 +209,6 @@ public class WebService : System.Web.Services.WebService
 
         return url;
     }
-
 
     [WebMethod]
     public string ProdutoGravarImagem(string param0, string param1, string param2)
@@ -235,6 +233,58 @@ public class WebService : System.Web.Services.WebService
 
     }
 
+
+
+
+    [WebMethod]
+    [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+    public string CarregaOferta(string param1)
+    {
+
+        //param1 = categoria
+
+        List<Object> resultado = new List<object>();
+        int totaldeRegistros = 0;
+
+        // localiza usuario
+        string stringSelect = "select nome, preco_normal ,preco_oferta , Imagem1 , Imagem2  " +
+            "from Tbl_Produtos " +
+            "where categoria = '" + param1 + "' " +
+            "and ofertar= 'SIM'";
+
+        OperacaoBanco Operacao = new OperacaoBanco();
+        SqlDataReader rcrdset = Operacao.Select(stringSelect);
+        while (rcrdset.Read())
+        {
+            resultado.Add(new
+            {
+                nome = rcrdset[0].ToString(),
+                pnormal = rcrdset[1].ToString(),
+                poferta = rcrdset[2].ToString(),
+                img1 = rcrdset[3].ToString(),
+                img2 = rcrdset[4].ToString()
+            });
+            totaldeRegistros += 1;
+        }
+        ConexaoBancoSQL.fecharConexao();
+
+        if (totaldeRegistros == 0)
+        {
+            resultado.Add(new
+            {
+                nome = "X",
+                pnormal = "0",
+                poferta = "0",
+                img1 = "X",
+                img2 = "X"
+            });
+        }
+
+        //O JavaScriptSerializer vai fazer o web service retornar JSON
+        JavaScriptSerializer js = new JavaScriptSerializer();
+        return js.Serialize(resultado);
+
+    }
 
 }
 

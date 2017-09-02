@@ -34,11 +34,14 @@
                         <br />
                         <div class="form-group">
                             <label for="input1" class="col-md-1 control-label">Nome</label>
-                            <div class="col-md-5">
+                            <div class="col-md-6">
                                 <input type="text" class="form-control" id="input1">
                             </div>
+                        </div>
+
+                        <div class="form-group">
                             <label for="input2" class="col-md-1 control-label">Categoria</label>
-                            <div class="col-md-5">
+                            <div class="col-md-6">
                                 <input type="text" class="form-control" id="input2">
                             </div>
                         </div>
@@ -86,6 +89,13 @@
                             <label for="inputbrindequant" class="col-md-2 control-label">Quantidade</label>
                             <div class="col-md-2">
                                 <input type="number" class="form-control" id="inputbrindequant" value="0">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input_Desc" class="col-md-1 control-label">Descritivo</label>
+                            <div class="col-md-9">
+                                <textarea class="form-control" id="input_Desc" rows="4"></textarea>
                             </div>
                         </div>
 

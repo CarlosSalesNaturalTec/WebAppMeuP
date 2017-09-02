@@ -85,6 +85,13 @@
                         </div>
                     </div>
 
+                    <div class="form-group">
+                        <label for="input_Desc" class="col-md-1 control-label">Descritivo</label>
+                        <div class="col-md-9">
+                            <textarea class="form-control" id="input_Desc" rows="4"></textarea>
+                        </div>
+                    </div>
+
                     <br />
                     <div class="col-md-1"></div>
                     <p>

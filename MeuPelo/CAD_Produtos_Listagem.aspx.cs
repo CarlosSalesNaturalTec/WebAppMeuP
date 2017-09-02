@@ -34,6 +34,7 @@ public partial class CAD_Produtos_Listagem : System.Web.UI.Page
             "<th>UND</th>" +
             "<th>PREÇO NORMAL</th>" +
             "<th>PREÇO C/ DESC.</th>" +
+            "<th>EM OFERTA</th>" +
             "</tr>" +
             "</thead>" +
             "<tbody>";
@@ -44,7 +45,7 @@ public partial class CAD_Produtos_Listagem : System.Web.UI.Page
     private void dadosCorpo()
     {
         // <!--*******Customização*******-->
-        string stringselect = "select ID_Produto, nome, categoria, estoque , unidade, preco_normal , preco_oferta   " +
+        string stringselect = "select ID_Produto, nome, categoria, estoque , unidade, preco_normal , preco_oferta , ofertar  " +
                 "from Tbl_Produtos " +
                 "where ID_Lojista = " + iduser +
                 " order by Nome"; 
@@ -61,6 +62,7 @@ public partial class CAD_Produtos_Listagem : System.Web.UI.Page
             string Coluna4 = Convert.ToString(dados[4]);  //unidade
             string Coluna5 = Convert.ToString(dados[5]);  //preco normal
             string Coluna6 = Convert.ToString(dados[6]);    // preco oferta
+            string Coluna7 = Convert.ToString(dados[7]);    // em oferta
 
             decimal valor = Convert.ToDecimal(dados[5]);
             string Coluna5a = "R$ " + valor.ToString("N", CultureInfo.CreateSpecificCulture("pt-BR"));
@@ -80,6 +82,7 @@ public partial class CAD_Produtos_Listagem : System.Web.UI.Page
                 "<td>" + Coluna4 + "</td>" +
                 "<td>" + Coluna5a + "</td>" +
                 "<td>" + Coluna6a + "</td>" +
+                "<td>" + Coluna7 + "</td>" +
                 "</tr>";
 
             str.Append(stringcomaspas);

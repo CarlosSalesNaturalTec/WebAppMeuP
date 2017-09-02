@@ -25,7 +25,7 @@ public partial class CAD_Produtos_Ficha : System.Web.UI.Page
         // <!--*******Customização. adicionar todos os campos, separados um em cada linha*******-->
         string stringSelect = "select " +
             "Nome , categoria  , unidade , preco_normal , preco_oferta , " +
-            "ofertar , ofertar_quant , brinde , brinde_quant " +
+            "ofertar , ofertar_quant , brinde , brinde_quant, descritivo  " +
             "from Tbl_Produtos " +
             "where ID_Produto = " + ID;
 
@@ -33,7 +33,7 @@ public partial class CAD_Produtos_Ficha : System.Web.UI.Page
         System.Data.SqlClient.SqlDataReader rcrdset = operacao.Select(stringSelect);
         while (rcrdset.Read())
         {
-            for (int i = 0; i <= 8; i++)  
+            for (int i = 0; i <= 9; i++)  
             {
                 ScriptDados = "x[" + i + "].value = \"" + Convert.ToString(rcrdset[i]) + "\";";
                 str.Append(ScriptDados);

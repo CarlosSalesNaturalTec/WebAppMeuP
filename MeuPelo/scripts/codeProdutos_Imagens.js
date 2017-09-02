@@ -38,7 +38,7 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
     document.getElementById('imagem1').addEventListener('change', capturaImagem, false);
     document.getElementById('imagem2').addEventListener('change', capturaImagem2, false);
 } else {
-    alert('The File APIs are not fully supported in this browser.');
+    alert('Atualize o navegador');
 }
 
 function GravarImagem(nomeBloco) {
@@ -46,17 +46,20 @@ function GravarImagem(nomeBloco) {
     var v1 = document.getElementById("IDAuxHidden").value;
     var v2 = "", v0 = "";
 
-
     switch (nomeBloco) {
         case "Bloco1":
+            document.getElementById("ok1").style.display = "none";
             document.getElementById("cog1").style.display = "block";
+
             v2 = document.getElementById("FotoHidden1").value;
-            v0 = "Foto1";
+            v0 = "Imagem1";
             break;
         case "Bloco2":
+            document.getElementById("ok2").style.display = "none";
             document.getElementById("cog2").style.display = "block";
+
             v2 = document.getElementById("FotoHidden2").value;
-            v0 = "Foto2";
+            v0 = "Imagem2";
             break;
     }
    

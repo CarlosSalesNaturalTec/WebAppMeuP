@@ -19,19 +19,17 @@
 
 <body>
 
-    <!-- GRUPO 2 -->
     <div id="grupo2" class="w3-container" style="display: block">
-
 
         <div class="col-md-12 col-lg-12 w3-border w3-light-gray" style="margin-top: 20px">
 
             <h3><i class="fa fa-file-image-o" aria-hidden="true"></i>&nbsp;<span id="lblNomePRoduto"></span> </h3>
 
-            <!-- Imagem  1 -->
+            <!-- Imagem 01 - Pequena 400x300px-->
             <div id="BlocoFoto1" class="w3-col s12 m10 l5 w3-padding">
                 <div class="panel panel-success">
                     <div class="panel-heading text-center">
-                        <h4 class="panel-title w3-small">IMAGEM 01</h4>
+                        <h4 class="panel-title w3-small">Imagem PEQUENA 400x300px</h4>
                     </div>
                     <div class="panel-body">
                         <div class="w3-center" style="width: 100%; height: 320px; margin: 0 auto">
@@ -50,11 +48,15 @@
 
             </div>
 
-            <!-- Imagem 2 -->
-            <div id="BlocoFoto2" class="w3-col s12 m10 l5 w3-padding">
+        </div>
+
+        <div class="col-md-12 col-lg-12 w3-border w3-light-gray" style="margin-top: 20px">
+
+            <!-- Imagem 02 - Grande 700x930px-->
+            <div id="BlocoFoto2" class="w3-col s12 m11 l10 w3-padding">
                 <div class="panel panel-success">
                     <div class="panel-heading text-center">
-                        <h4 class="panel-title w3-small">IMAGEM 02</h4>
+                        <h4 class="panel-title w3-small">Imagem GRANDE 700x930px</h4>
                     </div>
                     <div class="panel-body">
                         <div class="w3-center" style="width: 100%; height: 320px; margin: 0 auto">
@@ -71,7 +73,6 @@
                         <input id="FotoHidden2" type="hidden" />
                     </div>
                 </div>
-
             </div>
 
         </div>
