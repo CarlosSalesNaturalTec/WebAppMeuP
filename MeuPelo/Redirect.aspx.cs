@@ -11,10 +11,10 @@ public partial class Redirect : System.Web.UI.Page
         int vValida3 = Convert.ToInt16(vValida1) * Convert.ToInt16(vValida2);
         string vValida4 = vValida3.ToString();
 
-        string param = Request.QueryString["v1"];
+        string param = Request.QueryString["v3"];
         if (param == vValida4)
         {
-            Session["UserID"] = Request.QueryString["v2"];
+            Session["UserID"] = Request.QueryString["v1"];
             Response.Redirect("Painel.aspx");
         }
         else

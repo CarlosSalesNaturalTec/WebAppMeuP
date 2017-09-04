@@ -45,8 +45,8 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="CAD_Produtos_Listagem.aspx" target="iframe">Produtos&nbsp;<i class="fa fa-barcode" aria-hidden="true"></i></a></li>
-                    <li><a href="#">Vendas&nbsp;<i class="fa fa-dollar" aria-hidden="true"></i></a></li>
-                    <li><a href="#">Avaliações&nbsp;<i class="fa fa-wifi" aria-hidden="true"></i></a></li>
+                    <li><a href="Lojista_Vendas.aspx" target="iframe">Vendas&nbsp;<i class="fa fa-dollar" aria-hidden="true"></i></a></li>
+                    <li><a href="Lojista_Podium.aspx" target="iframe">Podium&nbsp;<i class="fa fa-trophy" aria-hidden="true"></i></a></li>
                     <li><a href="#" onclick="sair()">Sair&nbsp;<span class="glyphicon glyphicon-off"></span></a></li>
                 </ul>
             </div>

@@ -1,9 +1,67 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Meu Pel� - Login</title>
+
+        <!-- W3 CSS -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <!-- Jquery -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom fonts for this template -->
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+        <!-- Custom styles for this template -->
+        <link href="css/agency.min.css" rel="stylesheet">
 
     </head>
     <body>
-        Opa!
+
+        <div class="w3-container w3-center w3-padding ">
+
+            <h3>Meu Pelô</h3>
+
+            <button type="button" class="w3-btn w3-border w3-round" onclick="ExibirModal()">Entrar</button>
+            <br />
+        </div>
+
+        <!-- Modal Login -->
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-top" style="max-width: 400px">
+
+                <header class="w3-container w3-blue w3-center">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                    <p>�rea do Lojista</p>
+                </header>
+
+                <form class="w3-container">
+                    <div class="w3-section">
+                        <input id="input_User" class="w3-input w3-border w3-round w3-margin-bottom" type="text" placeholder="email" name="usrname"
+                               required>
+                        <input id="input_pwd" class="w3-input w3-border w3-round" type="password" placeholder="senha" name="psw" required>
+
+                        <a id="btentrar" class="w3-btn w3-block w3-round w3-blue w3-hover-light-blue w3-section w3-padding" onclick="TentarLogin()">Entrar <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+                    </div>
+                </form>
+
+                <div class="w3-container w3-center w3-text-blue">
+                    <p><a href="#" onclick="ExibirModalSignIn()">Criar Conta</a></p>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="scripts/codeLogin.js"></script>
     </body>
 </html>

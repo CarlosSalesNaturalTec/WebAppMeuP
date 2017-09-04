@@ -66,7 +66,7 @@
         function LoginCliente() {
             FB.login(function (response) {
                 if (response.status === 'connected') {
-                    alert('Conectado');
+                    alert('Conectado com Sucesso');
                 } else {
                     alert('NÃO Conectado');
                     // The person is not logged into this app or we are unable to tell.
@@ -74,6 +74,7 @@
             });
         }
     </script>
+
 
     <!-- Menu -->
     <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse" id="mainNav">
@@ -105,6 +106,7 @@
         </div>
     </nav>
 
+
     <!-- Inicio -->
     <header class="masthead">
         <div class="container">
@@ -115,6 +117,7 @@
             </div>
         </div>
     </header>
+
 
     <!-- Como Funciona -->
     <section id="services">
@@ -154,6 +157,7 @@
         </div>
     </section>
 
+
     <!-- Portfolio - Experimente -->
     <section class="bg-faded" id="portfolio">
         <div class="container">
@@ -167,7 +171,7 @@
 
                 <!-- Oferta 1 -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <div class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                    <div class="portfolio-link" data-toggle="modal" href="#portfolioModal1" onclick="document.getElementById('AuxModals').value = '0';">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -176,14 +180,14 @@
                         <div id="Bloco1Imagem"><img class="img-fluid" src="img/portfolio/blank.png" alt=""></div>
                     </div>
                     <div class="portfolio-caption">
-                        <h6 id="pacote1_Titulo">Surpresa 1</h6>
-                        <p id="pacote1_SubT" class="text-muted">Carregando...</p>
+                        <h6 id="pacote1_Titulo">Surpresa</h6>
+                        <p id="pacote1_SubT" class="text-muted">...</p>
                     </div>
                 </div>
 
                 <!-- Oferta 2 -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <div class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+                    <div class="portfolio-link" data-toggle="modal" href="#portfolioModal2" onclick="document.getElementById('AuxModals').value = '0';">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -192,14 +196,14 @@
                         <div id="Bloco2Imagem"><img class="img-fluid" src="img/portfolio/blank.png" alt=""></div>
                     </div>
                     <div class="portfolio-caption">
-                        <h4 id="pacote2_Titulo">Surpresa 2</h4>
-                        <p id="pacote2_SubT" class="text-muted">Carregando...</p>
+                        <h6 id="pacote2_Titulo">Surpresa</h6>
+                        <p id="pacote2_SubT" class="text-muted">...</p>
                     </div>
                 </div>
 
                 <!-- Oferta 3 -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <div class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+                    <div class="portfolio-link" data-toggle="modal" href="#portfolioModal3" onclick="document.getElementById('AuxModals').value = '0';">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -208,14 +212,14 @@
                         <div id="Bloco3Imagem"><img class="img-fluid" src="img/portfolio/blank.png" alt=""></div>
                     </div>
                     <div class="portfolio-caption">
-                        <h4 id="pacote3_Titulo">Surpresa 3</h4>
-                        <p id="pacote3_SubT" class="text-muted">Carregando...</p>
+                        <h6 id="pacote3_Titulo">Surpresa</h6>
+                        <p id="pacote3_SubT" class="text-muted">...</p>
                     </div>
                 </div>
 
                 <!-- Oferta 4 -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <div class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+                    <div class="portfolio-link" data-toggle="modal" href="#portfolioModal4" onclick="document.getElementById('AuxModals').value = '0';">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -224,14 +228,14 @@
                         <div id="Bloco4Imagem"><img class="img-fluid" src="img/portfolio/blank.png" alt=""></div>
                     </div>
                     <div class="portfolio-caption">
-                        <h4 id="pacote4_Titulo">Surpresa 4</h4>
-                        <p id="pacote4_SubT" class="text-muted">Carregando...</p>
+                        <h6 id="pacote4_Titulo">Surpresa</h6>
+                        <p id="pacote4_SubT" class="text-muted">...</p>
                     </div>
                 </div>
 
                 <!-- Oferta 5 -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <div class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+                    <div class="portfolio-link" data-toggle="modal" href="#portfolioModal5" onclick="document.getElementById('AuxModals').value = '0';">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -240,14 +244,14 @@
                         <div id="Bloco5Imagem"><img class="img-fluid" src="img/portfolio/blank.png" alt=""></div>
                     </div>
                     <div class="portfolio-caption">
-                        <h4 id="pacote5_Titulo">Surpresa 5</h4>
-                        <p id="pacote5_SubT" class="text-muted">Carregando...</p>
+                        <h6 id="pacote5_Titulo">Surpresa</h6>
+                        <p id="pacote5_SubT" class="text-muted">...</p>
                     </div>
                 </div>
 
                 <!-- Oferta 6 -->
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <div class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+                    <div class="portfolio-link" data-toggle="modal" href="#portfolioModal6" onclick="document.getElementById('AuxModals').value = '0';">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -256,14 +260,15 @@
                         <div id="Bloco6Imagem"><img class="img-fluid" src="img/portfolio/blank.png" alt=""></div>
                     </div>
                     <div class="portfolio-caption">
-                        <h4 id="pacote6_Titulo">Surpresa 6</h4>
-                        <p id="pacote6_SubT" class="text-muted">Carregando...</p>
+                        <h6 id="pacote6_Titulo">Surpresa</h6>
+                        <p id="pacote6_SubT" class="text-muted">...</p>
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
+
 
     <!--Mapa e Live Cam-->
     <section id="Mapa">
@@ -411,24 +416,26 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-                        <h4>Haroldo Peon</h4>
-                        <p class="text-muted">Negócios</p>
+                        <img class="mx-auto rounded-circle" src="img/team/5.jpg" alt="">
+                        <h4>Carlos Sales</h4>
+                        <p class="text-muted">Programador</p>
                         <ul class="list-inline social-buttons">
                             <li class="list-inline-item">
                                 <a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.facebook.com/CarlosSalesTI" target="_blank"><i class="fa fa-facebook"></i></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/carlos-sales-051a4565" target="_blank"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
+
                 <div class="col-sm-4">
                     <div class="team-member">
                         <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
@@ -472,18 +479,18 @@
 
                 <div class="col-sm-6">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="img/team/5.jpg" alt="">
-                        <h4>Carlos Sales</h4>
-                        <p class="text-muted">Developer</p>
+                        <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
+                        <h4>Haroldo Peon</h4>
+                        <p class="text-muted">Negócios</p>
                         <ul class="list-inline social-buttons">
                             <li class="list-inline-item">
                                 <a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="https://www.facebook.com/CarlosSalesTI" target="_blank"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="https://www.linkedin.com/in/carlos-sales-051a4565" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -523,36 +530,40 @@
     </footer>
 
 
+
     <!-- Portfolio Modals -->
     <!-- Modal 1 -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
+                    <p onclick="document.getElementById('AuxModals').value = '1';">X</p>
                 </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 offset-lg-2">
                             <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
-                                <p>
-                                    Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem
-                                    culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita
-                                    beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
-                                </p>
-                                <ul class="list-inline">
-                                    <li>Date: January 2017</li>
-                                    <li>Client: Threads</li>
-                                    <li>Category: Illustration</li>
-                                </ul>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i> Close Project</button>
+                                <h4 id="titulo1"></h4>
+                                <p id="subtitulo1" class="item-intro text-muted"></p>
+                                <div id="imagemBig1"><img class="img-fluid d-block mx-auto" src=""></div>
+                                <p id="descritivo1"></p>
+
+                                <div class="w3-row">                                   
+                                    <label for="formaPagProduto1" class="col-md-3">Forma de Pagamento</label>
+                                    <select class="w3-select w3-border col-md-4" id="formaPagProduto1">
+                                        <option value="Pagamento no Local">Pagamento no Local</option>
+                                        <option value="Moeda Virtual">Moeda Virtual</option>
+                                        <option value="Pagamento On Line">Pagamento On Line</option>
+                                    </select>
+                                </div> 
+                                <br />      
+                                                        
+                                <button class="btn btn-primary" data-dismiss="modal" type="button" onclick="REgistraVendaSimplificada();">EU QUERO</button>
+
+                                <input type="hidden" id="AuxIDLojista1" />
+                                <input type="hidden" id="AuxIDProduto1" />
+                                <input type="hidden" id="AuxValorProduto1" />
+
                             </div>
                         </div>
                     </div>
@@ -565,30 +576,29 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
+                    <p onclick="document.getElementById('AuxModals').value = '1';">X</p>
                 </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 offset-lg-2">
                             <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt="">
-                                <p>
-                                    Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem
-                                    culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita
-                                    beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
-                                </p>
-                                <ul class="list-inline">
-                                    <li>Date: January 2017</li>
-                                    <li>Client: Explore</li>
-                                    <li>Category: Graphic Design</li>
-                                </ul>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i> Close Project</button>
+                                <h4 id="titulo2"></h4>
+                                <p id="subtitulo2" class="item-intro text-muted"></p>
+                                <div id="imagemBig2"><img class="img-fluid d-block mx-auto" src=""></div>
+                                <p id="descritivo2"></p>
+                                <div class="w3-row">
+                                    <label for="formaPagProduto2" class="col-md-3">Forma de Pagamento</label>
+                                    <select class="w3-select w3-border col-md-4" id="formaPagProduto2">
+                                        <option value="Pagamento no Local">Pagamento no Local</option>
+                                        <option value="Moeda Virtual">Moeda Virtual</option>
+                                        <option value="Pagamento On Line">Pagamento On Line</option>
+                                    </select>
+                                </div>
+                                <br />
+                                <button class="btn btn-primary" data-dismiss="modal" type="button" onclick="REgistraVendaSimplificada2();">EU QUERO</button>
+                                <input type="hidden" id="AuxIDLojista2" />
+                                <input type="hidden" id="AuxIDProduto2" />
+                                <input type="hidden" id="AuxValorProduto2" />
                             </div>
                         </div>
                     </div>
@@ -601,30 +611,29 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
+                    <p onclick="document.getElementById('AuxModals').value = '1';">X</p>
                 </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 offset-lg-2">
                             <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
-                                <p>
-                                    Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem
-                                    culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita
-                                    beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
-                                </p>
-                                <ul class="list-inline">
-                                    <li>Date: January 2017</li>
-                                    <li>Client: Finish</li>
-                                    <li>Category: Identity</li>
-                                </ul>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i> Close Project</button>
+                                <h4 id="titulo3"></h4>
+                                <p id="subtitulo3" class="item-intro text-muted"></p>
+                                <div id="imagemBig3"><img class="img-fluid d-block mx-auto" src=""></div>
+                                <p id="descritivo3"></p>
+                                <div class="w3-row">
+                                    <label for="formaPagProduto3" class="col-md-3">Forma de Pagamento</label>
+                                    <select class="w3-select w3-border col-md-4" id="formaPagProduto3">
+                                        <option value="Pagamento no Local">Pagamento no Local</option>
+                                        <option value="Moeda Virtual">Moeda Virtual</option>
+                                        <option value="Pagamento On Line">Pagamento On Line</option>
+                                    </select>
+                                </div>
+                                <br />
+                                <button class="btn btn-primary" data-dismiss="modal" type="button" onclick="REgistraVendaSimplificada3();">EU QUERO</button>
+                                <input type="hidden" id="AuxIDLojista3" />
+                                <input type="hidden" id="AuxIDProduto3" />
+                                <input type="hidden" id="AuxValorProduto3" />
                             </div>
                         </div>
                     </div>
@@ -637,30 +646,29 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
+                    <p onclick="document.getElementById('AuxModals').value = '1';">X</p>
                 </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 offset-lg-2">
                             <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
-                                <p>
-                                    Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem
-                                    culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita
-                                    beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
-                                </p>
-                                <ul class="list-inline">
-                                    <li>Date: January 2017</li>
-                                    <li>Client: Lines</li>
-                                    <li>Category: Branding</li>
-                                </ul>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i> Close Project</button>
+                                <h4 id="titulo4"></h4>
+                                <p id="subtitulo4" class="item-intro text-muted"></p>
+                                <div id="imagemBig4"><img class="img-fluid d-block mx-auto" src=""></div>
+                                <p id="descritivo4"></p>
+                                <div class="w3-row">
+                                    <label for="formaPagProduto4" class="col-md-3">Forma de Pagamento</label>
+                                    <select class="w3-select w3-border col-md-4" id="formaPagProduto4">
+                                        <option value="Pagamento no Local">Pagamento no Local</option>
+                                        <option value="Moeda Virtual">Moeda Virtual</option>
+                                        <option value="Pagamento On Line">Pagamento On Line</option>
+                                    </select>
+                                </div>
+                                <br />
+                                <button class="btn btn-primary" data-dismiss="modal" type="button" onclick="REgistraVendaSimplificada4();">EU QUERO</button>
+                                <input type="hidden" id="AuxIDLojista4" />
+                                <input type="hidden" id="AuxIDProduto4" />
+                                <input type="hidden" id="AuxValorProduto4" />
                             </div>
                         </div>
                     </div>
@@ -673,30 +681,29 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
+                    <p onclick="document.getElementById('AuxModals').value = '1';">X</p>
                 </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 offset-lg-2">
                             <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="">
-                                <p>
-                                    Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem
-                                    culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita
-                                    beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
-                                </p>
-                                <ul class="list-inline">
-                                    <li>Date: January 2017</li>
-                                    <li>Client: Southwest</li>
-                                    <li>Category: Website Design</li>
-                                </ul>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i> Close Project</button>
+                                <h4 id="titulo5"></h4>
+                                <p id="subtitulo5" class="item-intro text-muted"></p>
+                                <div id="imagemBig5"><img class="img-fluid d-block mx-auto" src=""></div>
+                                <p id="descritivo5"></p>
+                                <div class="w3-row">
+                                    <label for="formaPagProduto5" class="col-md-3">Forma de Pagamento</label>
+                                    <select class="w3-select w3-border col-md-4" id="formaPagProduto5">
+                                        <option value="Pagamento no Local">Pagamento no Local</option>
+                                        <option value="Moeda Virtual">Moeda Virtual</option>
+                                        <option value="Pagamento On Line">Pagamento On Line</option>
+                                    </select>
+                                </div>
+                                <br />
+                                <button class="btn btn-primary" data-dismiss="modal" type="button" onclick="REgistraVendaSimplificada5();">EU QUERO</button>
+                                <input type="hidden" id="AuxIDLojista5" />
+                                <input type="hidden" id="AuxIDProduto5" />
+                                <input type="hidden" id="AuxValorProduto5" />
                             </div>
                         </div>
                     </div>
@@ -709,30 +716,29 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
+                    <p onclick="document.getElementById('AuxModals').value = '1';">X</p>
                 </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 offset-lg-2">
                             <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt="">
-                                <p>
-                                    Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem
-                                    culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita
-                                    beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
-                                </p>
-                                <ul class="list-inline">
-                                    <li>Date: January 2017</li>
-                                    <li>Client: Window</li>
-                                    <li>Category: Photography</li>
-                                </ul>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i> Close Project</button>
+                                <h4 id="titulo6"></h4>
+                                <p id="subtitulo6" class="item-intro text-muted"></p>
+                                <div id="imagemBig6"><img class="img-fluid d-block mx-auto" src=""></div>
+                                <p id="descritivo6"></p>
+                                <div class="w3-row">
+                                    <label for="formaPagProduto6" class="col-md-3">Forma de Pagamento</label>
+                                    <select class="w3-select w3-border col-md-4" id="formaPagProduto6">
+                                        <option value="Pagamento no Local">Pagamento no Local</option>
+                                        <option value="Moeda Virtual">Moeda Virtual</option>
+                                        <option value="Pagamento On Line">Pagamento On Line</option>
+                                    </select>
+                                </div>
+                                <br />
+                                <button class="btn btn-primary" data-dismiss="modal" type="button" onclick="REgistraVendaSimplificada6();">EU QUERO</button>
+                                <input type="hidden" id="AuxIDLojista6" />
+                                <input type="hidden" id="AuxIDProduto6" />
+                                <input type="hidden" id="AuxValorProduto6" />
                             </div>
                         </div>
                     </div>
@@ -849,6 +855,11 @@
     <!-- Scripts diversas -->
     <script type="text/javascript" src="scripts/codeLogin.js"></script>
     <script type="text/javascript" src="scripts/codeProdutos_CarregaImagem.js"></script>
+    <script type="text/javascript" src="scripts/codeRegistra_Venda.js"></script>
+
+    <!-- Auxiliares-->
+    <input type="hidden" id="AuxModals" />
+
 
 </body>
 

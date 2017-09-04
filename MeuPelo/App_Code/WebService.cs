@@ -34,7 +34,7 @@ public class WebService : System.Web.Services.WebService
         {
             url = "blank.aspx";
 
-            string stringselect = "select ID_Lojista,nome " +
+            string stringselect = "select ID_Lojista, nome " +
                 "from Tbl_Lojistas " +
                 "where usuario='" + param2 + "' and senha='" + param3 + "' ";
             OperacaoBanco operacao1 = new OperacaoBanco();
@@ -48,7 +48,8 @@ public class WebService : System.Web.Services.WebService
                 string vValida3a = vValida3.ToString();
 
                 // v1 = id do usuario    v2= nome      v3=validador
-                url = "Redirect.aspx?v1=" + Convert.ToString(dados[0]) + 
+                url = "Redirect.aspx"+
+                    "?v1=" + Convert.ToString(dados[0]) + 
                     "&v2=" + Convert.ToString(dados[1]) +
                     "&v3=" + vValida3a;
             }
@@ -65,7 +66,7 @@ public class WebService : System.Web.Services.WebService
         string Identificador_msg = "0";
 
         // localiza usuario
-        string stringSelect = "select senha,ID_Lojista from Tbl_Lojistas where usuario = '" + param1 + "'";
+        string stringSelect = "select senha,ID_Lojista,nome from Tbl_Lojistas where usuario = '" + param1 + "'";
         OperacaoBanco Identificador_Operacao = new OperacaoBanco();
         SqlDataReader Identificador_rcrdset = Identificador_Operacao.Select(stringSelect);
         while (Identificador_rcrdset.Read())
@@ -79,8 +80,9 @@ public class WebService : System.Web.Services.WebService
                 string vValida4 = vValida3.ToString();
 
                 Identificador_msg = "Redirect.aspx" +
-                    "?v1=" + vValida4 +
-                    "&v2=" + Convert.ToString(Identificador_rcrdset[1]);
+                    "?v1=" + Convert.ToString(Identificador_rcrdset[1]) +
+                    "&v2=" + Convert.ToString(Identificador_rcrdset[2]) +
+                    "&v3=" + vValida4;
             }
             else
             {
@@ -247,7 +249,7 @@ public class WebService : System.Web.Services.WebService
         int totaldeRegistros = 0;
 
         // localiza usuario
-        string stringSelect = "select nome, preco_normal ,preco_oferta , Imagem1 , Imagem2  " +
+        string stringSelect = "select nome, preco_normal ,preco_oferta , descritivo , Imagem1 , ID_Produto , ID_Lojista  " +
             "from Tbl_Produtos " +
             "where categoria = '" + param1 + "' " +
             "and ofertar= 'SIM'";
@@ -261,8 +263,11 @@ public class WebService : System.Web.Services.WebService
                 nome = rcrdset[0].ToString(),
                 pnormal = rcrdset[1].ToString(),
                 poferta = rcrdset[2].ToString(),
-                img1 = rcrdset[3].ToString(),
-                img2 = rcrdset[4].ToString()
+                descr = rcrdset[3].ToString(),
+                img1 = rcrdset[4].ToString(),
+                idprod = rcrdset[5].ToString(),
+                idloj = rcrdset[6].ToString(),
+
             });
             totaldeRegistros += 1;
         }
@@ -275,14 +280,53 @@ public class WebService : System.Web.Services.WebService
                 nome = "X",
                 pnormal = "0",
                 poferta = "0",
+                descr = "X",
                 img1 = "X",
-                img2 = "X"
+                idprod = "0",
+                idloj = "0"
             });
         }
 
         //O JavaScriptSerializer vai fazer o web service retornar JSON
         JavaScriptSerializer js = new JavaScriptSerializer();
         return js.Serialize(resultado);
+
+    }
+
+
+
+    [WebMethod]
+    public string VendaSimplificada(string param1, string param2, string param3, string param4, string param5, string param6, string param7, string param8)
+    {
+        string msgRetorno="";
+
+        //resumo da venda
+        OperacaoBanco operacao = new OperacaoBanco();
+        bool inserir = operacao.Insert("INSERT INTO Tbl_Venda_Simplificada ( ID_Cliente, ID_Lojista , ID_Produto, " +
+            "Produto , Quant , ValorProduto , ValorTotal , FormaPag, DataVenda ) " +
+            "VALUES (" +
+            "'" + param1 + "', " +
+            param2 + ", " +
+            param3 + ", " +
+            "'" + param4 + "', " +
+            param5 + ", " +
+            param6 + ", " +
+            param7 + ", " +
+            "'" + param8 + "', " +
+            "getdate() " +
+            ")");
+        ConexaoBancoSQL.fecharConexao();
+
+        if (inserir)
+        {
+            msgRetorno = "Venda simplificada registrada com sucesso!";
+        }
+        else
+        {
+            msgRetorno = "Tente Novamente";
+        }
+
+        return msgRetorno;
 
     }
 

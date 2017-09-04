@@ -14,6 +14,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+      <!-- Paginação -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" />
+
 </head>
 <body>
 
@@ -64,8 +71,8 @@
 
 
     <!-- Scripts Diversos -->
-    <script type="text/javascript" src="Scripts/codeProdutos_Listagem.js"></script>
-    <!--*******Customização*******-->
-
+    <script type="text/javascript" src="scripts/codeProdutos_Listagem.js"></script>
+    <script type="text/javascript" src="scripts/codePaginacao.js"></script>
+    
 </body>
 </html>

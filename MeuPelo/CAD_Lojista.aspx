@@ -103,11 +103,44 @@
 
                 <div class="panel-body">
                     <div class="w3-center" style="width: 100%; height: 140px; margin: 0 auto">
-                        <i class="fa fa-5x fa-barcode" aria-hidden="true"></i>
+                        <i class="fa fa-5x fa-barcode w3-text-blue" aria-hidden="true"></i>
+                        <br />
                         <a onclick="window.location.href ='CAD_Produtos_Listagem.aspx'" class="btn btn-block btn-primary">Produtos</a>
                     </div>
                 </div>
 
+            </div>
+        </div>
+
+        <!-- Vendas-->
+        <div id="BlocoVendas" class="w3-col s12 m6 l4 w3-padding">
+            <div class="panel panel-success">
+                <div class="panel-heading text-center">
+                    <h4 class="panel-title w3-small">Vendas</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="w3-center" style="width: 100%; height: 140px; margin: 0 auto">
+                        <i class="fa fa-5x fa-dollar w3-text-blue" aria-hidden="true"></i>
+                        <br />
+                        <a onclick="window.location.href ='Lojista_Vendas.aspx'" class="btn btn-block btn-primary">Vendas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Podium-->
+        <div id="BlocoPodium" class="w3-col s12 m6 l4 w3-padding">
+            <div class="panel panel-success">
+                <div class="panel-heading text-center">
+                    <h4 class="panel-title w3-small">Podium</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="w3-center" style="width: 100%; height: 140px; margin: 0 auto">
+                        <i class="fa fa-5x fa-trophy w3-text-blue" aria-hidden="true"></i>
+                        <br />
+                        <a onclick="window.location.href ='Lojista_Podium.aspx'" class="btn btn-block btn-primary">Podium</a>
+                    </div>
+                </div>
             </div>
         </div>
 
