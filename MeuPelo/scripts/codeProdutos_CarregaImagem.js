@@ -67,7 +67,10 @@ function mostraItem() {
     var divAux = document.getElementById('AuxModals').value;
     if (divAux == '0') { return }
    
-    if (itens == 9999) { return; }
+    if (itens == 9999) {
+        buscarURI('ALIMENTOS');
+        return;
+    }
     if (itens == 0) { return; }
 
     //tela inicial
@@ -114,7 +117,10 @@ function mostraItem_2() {
     var divAux = document.getElementById('AuxModals').value;
     if (divAux == '0') { return }
    
-    if (itens_2 == 9999) { return; }
+    if (itens_2 == 9999) {
+        buscarURI_2('BEBIDAS');
+        return;
+    }
     if (itens_2 == 0) { return; }
 
     //tela inicial
@@ -159,7 +165,10 @@ function mostraItem_3() {
     var divAux = document.getElementById('AuxModals').value;
     if (divAux == '0') { return }
 
-    if (itens_3 == 9999) { return; }
+    if (itens_3 == 9999) {
+        buscarURI_3('EVENTOS');
+        return;
+    }
     if (itens_3 == 0) { return; }
 
     //tela inicial
@@ -204,7 +213,10 @@ function mostraItem_4() {
     var divAux = document.getElementById('AuxModals').value;
     if (divAux == '0') { return }
 
-    if (itens_4 == 9999) { return; }
+    if (itens_4 == 9999) {
+        buscarURI_4('TOURS');
+        return;
+    }
     if (itens_4 == 0) { return; }
 
     //tela inicial
@@ -249,7 +261,10 @@ function mostraItem_5() {
     var divAux = document.getElementById('AuxModals').value;
     if (divAux == '0') { return }
 
-    if (itens_5 == 9999) { return; }
+    if (itens_5 == 9999) {
+        buscarURI_5('GALERIAS');
+        return;
+    }
     if (itens_5 == 0) { return; }
 
     //tela inicial
@@ -295,7 +310,10 @@ function mostraItem_6() {
     var divAux = document.getElementById('AuxModals').value;
     if (divAux == '0') { return }
 
-    if (itens_6 == 9999) { return; }
+    if (itens_6 == 9999) {
+        buscarURI_6('TREINAMENTOS');
+        return;
+    }
     if (itens_6 == 0) { return; }
 
     //tela inicial
