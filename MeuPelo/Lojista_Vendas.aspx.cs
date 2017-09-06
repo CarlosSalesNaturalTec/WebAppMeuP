@@ -6,11 +6,12 @@ public partial class Lojista_Vendas : System.Web.UI.Page
 {
 
     StringBuilder str = new StringBuilder();
+    string idAux;
 
     protected void Page_Load(object sender, EventArgs e)
     {
 
-        string idAux = Session["UserID"].ToString();
+        idAux = Session["UserID"].ToString();
 
         montaCabecalho();
         dadosCorpo();
@@ -61,6 +62,7 @@ public partial class Lojista_Vendas : System.Web.UI.Page
         // <!--*******Customização*******-->
         string stringselect = "select format(DataVenda,'dd/MM/yyyy') as d1, produto, quant, ValorProduto, ValorTotal, FormaPag " +
                 "from Tbl_Venda_Simplificada  " +
+                "where ID_Lojista = " + idAux +
                 "order by ID_Venda desc";
 
         OperacaoBanco operacao = new OperacaoBanco();
