@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Meu Pelô - LogOut</title>
+    <title>Passaporte Salvador - LogOut</title>
 </head>
 <body>
 </body>

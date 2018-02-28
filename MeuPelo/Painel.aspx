@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Meu Pelô - Área do Lojista - Painel Inicial</title>
+    <title>Passaporte Salvador - Área do Lojista - Painel Inicial</title>
 
     <!-- Jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -40,7 +40,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="CAD_Lojista.aspx" target="iframe">Meu Pelô - Painel do Lojista</a>
+                <a class="navbar-brand" href="CAD_Lojista.aspx" target="iframe">Passaporte Salvador - Painel do Lojista</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">

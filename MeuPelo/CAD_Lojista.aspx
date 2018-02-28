@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Meu Pelô - Área do Lojista - Dados Lojista</title>
+    <title>Passaporte Salvador - Área do Lojista - Dados Lojista</title>
 
     <!-- Jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
