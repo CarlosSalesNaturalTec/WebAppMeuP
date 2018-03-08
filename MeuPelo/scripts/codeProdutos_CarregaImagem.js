@@ -5,6 +5,7 @@
     iAux = 0;
     buscarURI('ALIMENTOS');
     setInterval(mostraItem, 5000);
+    stop1 = 0;
 
 
     // BEBIDAS
@@ -12,6 +13,7 @@
     iAux_2 = 0;
     buscarURI_2('BEBIDAS');
     setInterval(mostraItem_2, 5000);
+    stop2 = 0;
 
 
     // EVENTOS
@@ -75,19 +77,18 @@ function mostraItem() {
 
     //tela inicial
     document.getElementById('pacote1_Titulo').innerHTML = item[iAux].nome;
-    document.getElementById('pacote1_SubT').innerHTML = "<small>De: </small><s>R$ " + item[iAux].pnormal + ",00</s> <small>&nbsp;&nbsp;Por: </small>R$" + item[iAux].poferta + ",00";
+    document.getElementById('pacote1_SubT').innerHTML = "R$" + item[iAux].poferta + ",00";
     document.getElementById('Bloco1Imagem').innerHTML = "<img class=\"img-fluid\" src=\"" + item[iAux].img1 + "\"/>";
 
     //detalhes do produto
     document.getElementById('titulo1').innerHTML = item[iAux].nome;
-    document.getElementById('subtitulo1').innerHTML = "<small>De: </small><s>R$ " + item[iAux].pnormal + ",00</s> <small>&nbsp;&nbsp;Por: </small>R$" + item[iAux].poferta + ",00";
+    document.getElementById('subtitulo1').innerHTML = "R$" + item[iAux].poferta + ",00";
     document.getElementById('descritivo1').innerHTML = item[iAux].descr;
     document.getElementById('imagemBig1').innerHTML = "<img class=\"img-fluid d-block mx-auto\" src=\"" + item[iAux].img1 + "\"/>";
 
     document.getElementById('AuxIDLojista1').value = item[iAux].idloj;
     document.getElementById('AuxIDProduto1').value = item[iAux].idprod;
     document.getElementById('AuxValorProduto1').value = item[iAux].poferta;
-
 
     if (iAux >= itens) { iAux = 0; } else { iAux += 1; }
 
@@ -125,12 +126,12 @@ function mostraItem_2() {
 
     //tela inicial
     document.getElementById('pacote2_Titulo').innerHTML = item_2[iAux_2].nome;
-    document.getElementById('pacote2_SubT').innerHTML = "<small>De: </small><s>R$ " + item_2[iAux_2].pnormal + ",00</s> <small>&nbsp;&nbsp;Por: </small>R$" + item_2[iAux_2].poferta + ",00";
+    document.getElementById('pacote2_SubT').innerHTML = "R$" + item_2[iAux_2].poferta + ",00";
     document.getElementById('Bloco2Imagem').innerHTML = "<img class=\"img-fluid\" src=\"" + item_2[iAux_2].img1 + "\"/>";
 
     //detalhes do produto
     document.getElementById('titulo2').innerHTML = item_2[iAux_2].nome;
-    document.getElementById('subtitulo2').innerHTML = "<small>De: </small><s>R$ " + item_2[iAux_2].pnormal + ",00</s> <small>&nbsp;&nbsp;Por: </small>R$" + item_2[iAux_2].poferta + ",00";
+    document.getElementById('subtitulo2').innerHTML = "R$" + item_2[iAux_2].poferta + ",00";
     document.getElementById('descritivo2').innerHTML = item_2[iAux_2].descr;
     document.getElementById('imagemBig2').innerHTML = "<img class=\"img-fluid d-block mx-auto\" src=\"" + item_2[iAux_2].img1 + "\"/>";
 
@@ -173,12 +174,12 @@ function mostraItem_3() {
 
     //tela inicial
     document.getElementById('pacote3_Titulo').innerHTML = item_3[iAux_3].nome;
-    document.getElementById('pacote3_SubT').innerHTML = "<small>De: </small><s>R$ " + item_3[iAux_3].pnormal + ",00</s> <small>&nbsp;&nbsp;Por: </small>R$" + item_3[iAux_3].poferta + ",00";
+    document.getElementById('pacote3_SubT').innerHTML = "R$" + item_3[iAux_3].poferta + ",00";
     document.getElementById('Bloco3Imagem').innerHTML = "<img class=\"img-fluid\" src=\"" + item_3[iAux_3].img1 + "\"/>";
 
     //detalhes do produto
     document.getElementById('titulo3').innerHTML = item_3[iAux_3].nome;
-    document.getElementById('subtitulo3').innerHTML = "<small>De: </small><s>R$ " + item_3[iAux_3].pnormal + ",00</s> <small>&nbsp;&nbsp;Por: </small>R$" + item_3[iAux_3].poferta + ",00";
+    document.getElementById('subtitulo3').innerHTML = "R$" + item_3[iAux_3].poferta + ",00";
     document.getElementById('descritivo3').innerHTML = item_3[iAux_3].descr;
     document.getElementById('imagemBig3').innerHTML = "<img class=\"img-fluid d-block mx-auto\" src=\"" + item_3[iAux_3].img1 + "\"/>";
 
@@ -221,12 +222,12 @@ function mostraItem_4() {
 
     //tela inicial
     document.getElementById('pacote4_Titulo').innerHTML = item_4[iAux_4].nome;
-    document.getElementById('pacote4_SubT').innerHTML = "<small>De: </small><s>R$ " + item_4[iAux_4].pnormal + ",00</s> <small>&nbsp;&nbsp;Por: </small>R$" + item_4[iAux_4].poferta + ",00";
+    document.getElementById('pacote4_SubT').innerHTML = "R$" + item_4[iAux_4].poferta + ",00";
     document.getElementById('Bloco4Imagem').innerHTML = "<img class=\"img-fluid\" src=\"" + item_4[iAux_4].img1 + "\"/>";
 
     //detalhes do produto
     document.getElementById('titulo4').innerHTML = item_4[iAux_4].nome;
-    document.getElementById('subtitulo4').innerHTML = "<small>De: </small><s>R$ " + item_4[iAux_4].pnormal + ",00</s> <small>&nbsp;&nbsp;Por: </small>R$" + item_4[iAux_4].poferta + ",00";
+    document.getElementById('subtitulo4').innerHTML = "R$" + item_4[iAux_4].poferta + ",00";
     document.getElementById('descritivo4').innerHTML = item_4[iAux_4].descr;
     document.getElementById('imagemBig4').innerHTML = "<img class=\"img-fluid d-block mx-auto\" src=\"" + item_4[iAux_4].img1 + "\"/>";
 
@@ -269,12 +270,12 @@ function mostraItem_5() {
 
     //tela inicial
     document.getElementById('pacote5_Titulo').innerHTML = item_5[iAux_5].nome;
-    document.getElementById('pacote5_SubT').innerHTML = "<small>De: </small><s>R$ " + item_5[iAux_5].pnormal + ",00</s> <small>&nbsp;&nbsp;Por: </small>R$" + item_5[iAux_5].poferta + ",00";
+    document.getElementById('pacote5_SubT').innerHTML = "R$" + item_5[iAux_5].poferta + ",00";
     document.getElementById('Bloco5Imagem').innerHTML = "<img class=\"img-fluid\" src=\"" + item_5[iAux_5].img1 + "\"/>";
 
     //detalhes do produto
     document.getElementById('titulo5').innerHTML = item_5[iAux_5].nome;
-    document.getElementById('subtitulo5').innerHTML = "<small>De: </small><s>R$ " + item_5[iAux_5].pnormal + ",00</s> <small>&nbsp;&nbsp;Por: </small>R$" + item_5[iAux_5].poferta + ",00";
+    document.getElementById('subtitulo5').innerHTML = "R$" + item_5[iAux_5].poferta + ",00";
     document.getElementById('descritivo5').innerHTML = item_5[iAux_5].descr;
     document.getElementById('imagemBig5').innerHTML = "<img class=\"img-fluid d-block mx-auto\" src=\"" + item_5[iAux_5].img1 + "\"/>";
 
@@ -318,12 +319,12 @@ function mostraItem_6() {
 
     //tela inicial
     document.getElementById('pacote6_Titulo').innerHTML = item_6[iAux_6].nome;
-    document.getElementById('pacote6_SubT').innerHTML = "<small>De: </small><s>R$ " + item_6[iAux_6].pnormal + ",00</s> <small>&nbsp;&nbsp;Por: </small>R$" + item_6[iAux_6].poferta + ",00";
+    document.getElementById('pacote6_SubT').innerHTML = "R$" + item_6[iAux_6].poferta + ",00";
     document.getElementById('Bloco6Imagem').innerHTML = "<img class=\"img-fluid\" src=\"" + item_6[iAux_6].img1 + "\"/>";
 
     //detalhes do produto
     document.getElementById('titulo6').innerHTML = item_6[iAux_6].nome;
-    document.getElementById('subtitulo6').innerHTML = "<small>De: </small><s>R$ " + item_6[iAux_6].pnormal + ",00</s> <small>&nbsp;&nbsp;Por: </small>R$" + item_6[iAux_6].poferta + ",00";
+    document.getElementById('subtitulo6').innerHTML = "R$" + item_6[iAux_6].poferta + ",00";
     document.getElementById('descritivo6').innerHTML = item_6[iAux_6].descr;
     document.getElementById('imagemBig6').innerHTML = "<img class=\"img-fluid d-block mx-auto\" src=\"" + item_6[iAux_6].img1 + "\"/>";
 
