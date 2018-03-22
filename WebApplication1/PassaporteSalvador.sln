@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{978EACE1-EE75-44F1-B3F7-4AAA3F3B617E}"
-EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MeuPelo", "..\MeuPelo\", "{F2AABD6D-3C5A-4DBD-AFE6-27392B440C9E}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
@@ -33,10 +31,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{978EACE1-EE75-44F1-B3F7-4AAA3F3B617E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{978EACE1-EE75-44F1-B3F7-4AAA3F3B617E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{978EACE1-EE75-44F1-B3F7-4AAA3F3B617E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{978EACE1-EE75-44F1-B3F7-4AAA3F3B617E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F2AABD6D-3C5A-4DBD-AFE6-27392B440C9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F2AABD6D-3C5A-4DBD-AFE6-27392B440C9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2AABD6D-3C5A-4DBD-AFE6-27392B440C9E}.Release|Any CPU.ActiveCfg = Debug|Any CPU
